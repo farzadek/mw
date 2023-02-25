@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import i18n from "@/plugins/i18n";
 
 const routes = [
   {
@@ -21,6 +22,13 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+});
+
+router.beforeEach((to) => {
+  let lang = to.params.lang;
+  if (!lang) {
+    i18n.local = "en";
+  }
 });
 
 export default router;

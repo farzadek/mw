@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver,ResizeObserver,WebAnimations,Object.fromEntries,Array.prototype.at"></script>
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content="Montreal web | Entreprise de design, programmation Web et Infographie, longueuil."
+    />
+    <meta
+      name="keywords"
+      content="design web, programmation Web, infographie, web master, pigiste frontend."
+    />
+    <meta
+      property="og:title"
+      content="Montreal web, Design et programmation web, Longueuil | Conception de sites Web &amp; Infographie."
+    />
+    <meta property="og:url" content="https://montrealweb.ca" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Montreal Web" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta
+      property="og:description"
+      content="Montreal web | Entreprise de design, programmation Web et Infographie - longueuil."
+    />
+    <title>montrealweb – Web design and programming</title>
+    <meta content="index, follow" name="robots" />
+    <link rel="canonical" href="https://montrealweb.ca" />
+    <meta
+      name="google-site-verification"
+      content="YpKSadHerN9XgX9AsoZU58y10QeVTHpzt6a-Tyktxhs"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-B4GRH6TS2Q"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-B4GRH6TS2Q");
+    </script>
+    <!--
+    <link
+      rel="apple-touch-icon"
+      href="assets/apple-touch-icon-iphone-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/apple-touch-icon-ipad-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/apple-touch-icon-iphone-retina-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/apple-touch-icon-ipad-retina-152x152.png"
+    />
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->

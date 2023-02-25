@@ -1,0 +1,32 @@
+$primaryFont: "Roboto", sans-serif;
+$secondaryFont: "Raleway", sans-serif;
+
+$sm: 600px;
+$md: 964px;
+$lg: 1264px;
+$xl: 1904px;
+
+
+
+$dark-grey: #181818;
+$grey: #666666;
+$violet: #5a0060;
+
+
+.section-title{
+    text-transform: uppercase;
+    text-align: center;
+    color: $violet;
+    font-family: $secondaryFont !important;
+    font-weight: bold;
+}
+.section-subtitle{
+    text-transform: uppercase;
+    text-align: center;
+    color: $grey;
+    font-family: $secondaryFont !important;
+}
+.primary-btn{
+    background-color: $violet;
+    color: #ffffff;
+}

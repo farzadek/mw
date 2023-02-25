@@ -1,0 +1,5 @@
+@import "./variables";
+.services-container {
+  width: 100vw;
+  background-color: transparentize($color: $violet, $amount: 0.9);
+}

@@ -1,0 +1,28 @@
+{
+  "appbar": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "packages": "Packages",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "portfolio": "Portfolio",
+    "packages": "Packages",
+    "wedo": "We do",
+    "wedoOptions": [
+      { "option1": "Web design" },
+      { "option2": "Web programming" },
+      { "option3": "Graphic design" },
+      { "option4": "Photography" },
+      { "option5": "UX and SEO" }
+    ]
+  },
+  "about": {
+    "subTitle": "WHAT YOU NEED TO KNOW ABOUT US!",
+    "title": "WHO WE ARE",
+    "description": "A sharp group of 4 passionate people who are passionate about web development and design. A Frontend specialist, a Backend specilist, a UI/UX and graphic designer and a webmaster. This is MontrealWeb group. Talented and specialist!",
+    "findme": "Find me on"
+  }
+}
