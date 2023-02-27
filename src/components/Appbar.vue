@@ -4,7 +4,7 @@
       <v-row>
         <div class="logo-title-box">
           <img
-            class="logo-image d-md-none"
+            class="logo-image d-md-none ml-3"
             :src="logo"
             alt="montreal web logo"
           />
@@ -13,7 +13,7 @@
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon
           @click="drawer = !drawer"
-          class="d-flex d-md-none"
+          class="d-flex d-md-none mr-5"
           icon="mdi-menu"
         ></v-app-bar-nav-icon>
         <div class="d-none d-md-flex">
@@ -27,9 +27,15 @@
   <v-navigation-drawer v-model="drawer" absolute temporary>
     <v-list nav dense>
       <v-list-item v-for="item in appbarItems" :key="item">
-        <v-btn>{{ $t(`appbar.${item}`) }}</v-btn>
+        <v-btn variant="text">{{ $t(`appbar.${item}`) }}</v-btn>
       </v-list-item>
     </v-list>
+    <v-btn
+      class="ml-3 mt-4"
+      variant="text"
+      @click="$root.$i18n.locale = $t('appbar.lang')"
+      >{{ $t("appbar.lang") }}
+    </v-btn>
   </v-navigation-drawer>
 </template>
 

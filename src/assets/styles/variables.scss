@@ -1,32 +1,48 @@
 $primaryFont: "Roboto", sans-serif;
 $secondaryFont: "Raleway", sans-serif;
+$thirdFont: Lato, sans-serif;
 
 $sm: 600px;
 $md: 964px;
 $lg: 1264px;
 $xl: 1904px;
 
+$secondaryColor1: #181818;
+$secondaryColor2: #666666;
+$primaryColor1: #5a0060;
 
+section {
+    width: 100vw;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    overflow-x: hidden;
+    &:nth-child(2n + 1) {
+        background-color: transparentize($color: $primaryColor1, $amount: 0.95);
+    }
+}
 
-$dark-grey: #181818;
-$grey: #666666;
-$violet: #5a0060;
-
-
-.section-title{
+.section-title {
     text-transform: uppercase;
     text-align: center;
-    color: $violet;
-    font-family: $secondaryFont !important;
+    color: $primaryColor1;
+    font-family: $thirdFont;
     font-weight: bold;
+    font-size: 2.5em;
+    letter-spacing: 3px;
 }
-.section-subtitle{
+.section-subtitle {
     text-transform: uppercase;
     text-align: center;
-    color: $grey;
-    font-family: $secondaryFont !important;
+    color: $secondaryColor2;
+    font-family: $secondaryFont;
+    font-size: 1em;
+    letter-spacing: 0.1em;
 }
-.primary-btn{
-    background-color: $violet;
+.primary-btn {
+    background-color: $primaryColor1;
     color: #ffffff;
+}
+.secondary-btn {
+    color: $primaryColor1;
+    background-color: #ffffff;
 }

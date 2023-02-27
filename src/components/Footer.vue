@@ -7,10 +7,16 @@
         class="mx-4"
         variant="plain"
         size="small"
-        >{{ $t(`appbar.${item}`) }}</v-btn
-      >
+        >{{ $t(`appbar.${item}`) }}
+      </v-btn>
+      <v-btn
+        class="mx-4"
+        variant="plain"
+        size="small"
+        @click="$root.$i18n.locale = $t('appbar.lang')"
+        >{{ $t("appbar.lang") }}
+      </v-btn>
     </div>
-
     <div class="pt-4 text-center w-100">
       {{ new Date().getFullYear() }} — MontrealWeb.ca
     </div>

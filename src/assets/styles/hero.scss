@@ -25,13 +25,13 @@
   justify-content: center;
   .v-btn {
     &:first-child {
-      background-color: #5a0060;
+      background-color: $primaryColor1;
       color: #ffffff;
     }
   }
 }
 .hero-container .hero-text-box .buttons-box .v-btn:first-child {
-  background-color: #5a0060;
+  background-color: $primaryColor1;
 }
 @media (max-width: 600px) {
   .hero-container {

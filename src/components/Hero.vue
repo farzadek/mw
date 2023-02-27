@@ -4,7 +4,7 @@
       <div class="hero-text">{{ $t(`hero.wedo`) }} <span>WEB DESIGN</span></div>
       <div class="buttons-box">
         <v-btn class="primary-btn mr-5">{{ $t(`hero.portfolio`) }}</v-btn>
-        <v-btn>{{ $t(`hero.packages`) }}</v-btn>
+        <v-btn class="secondary-btn">{{ $t(`hero.packages`) }}</v-btn>
       </div>
     </div>
   </div>

@@ -5,7 +5,8 @@
     "portfolio": "Portfolio",
     "packages": "Packages",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "lang": "fr"
   },
   "hero": {
     "portfolio": "Portfolio",
@@ -22,7 +23,22 @@
   "about": {
     "subTitle": "WHAT YOU NEED TO KNOW ABOUT US!",
     "title": "WHO WE ARE",
-    "description": "A sharp group of 4 passionate people who are passionate about web development and design. A Frontend specialist, a Backend specilist, a UI/UX and graphic designer and a webmaster. This is MontrealWeb group. Talented and specialist!",
-    "findme": "Find me on"
+    "description": "A sharp group of 4 passionate people who are passionate about web development and design. A Frontend specialist, a Backend specilist, a UI/UX and graphic designer and a webmaster. This is MontrealWeb group. Talented and specialist!"
+  },
+  "services": {
+    "subTitle": "CE QUE VOUS DEVEZ SAVOIR SUR MOI !",
+    "title": "Services",
+    "ui": "Web design (UI)",
+    "uiDescription": "Web design description",
+    "programming": "Programming",
+    "programmingDescription": "Programming description",
+    "ux": "User experience",
+    "uxDescription": "UX, SEO description",
+    "graphic": "Grasphic design",
+    "graphicDescription": "Graphic design description"
+  },
+  "portfolio": {
+    "subTitle": "See some projects and designs",
+    "title": "Portfolio"
   }
 }
