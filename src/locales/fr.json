@@ -5,23 +5,39 @@
     "portfolio": "Portfolio",
     "packages": "Packages",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "lang": "en"
   },
   "hero": {
     "portfolio": "Portfolio",
     "packages": "Packages",
     "wedo": "On fait",
     "wedoOptions": [
-      { "option1": "Design web" },
-      { "option2": "Programmation web" },
-      { "option3": "Infographie" },
-      { "option4": "Photographie" },
-      { "option5": "UX et SEO" }
+      { "option": "Design web" },
+      { "option": "Programmation web" },
+      { "option": "Infographie" },
+      { "option": "UX et SEO" }
     ]
   },
   "about": {
     "subTitle": "CE QUE VOUS DEVEZ SAVOIR SUR MOI !",
     "title": "À propos de moi",
     "description": "Je détiens un certificat d'études collégiales en « technologie web (frontend) », un diplôme d'études collégiales en « programmation d'applications informatiques » et un diplôme professionnel en infographie (Infographie). J'ai développé une bonne expérience dans le domaine de l'informatique. J'ai plus de 10 ans d'expériences notamment dans la programmation, en tant que développeur Front-end et développeur UI/UX dans les services financiers, le e-commerce et le gouvernement. Depuis 2010, je travaille en tant que développeur web, développeur Front-end, développeur UI/UX, concepteur Web ou développeur Full-stack. Certains projets sur lesquels j'ai travaillé sont Pages Jaunes, Desjardins, Le Directeur général des élections du Québec (DGEQ), CGI, Air Canada, etc."
+  },
+  "services": {
+    "subTitle": "CE QUE VOUS DEVEZ SAVOIR SUR MOI !",
+    "title": "À propos de moi",
+    "ui": "Design web (UI)",
+    "uiDescription": "Web design description",
+    "programming": "Programation",
+    "programmingDescription": "Programming description",
+    "ux": "User experience",
+    "uxDescription": "UX, SEO description",
+    "graphic": "Grasphic design",
+    "graphicDescription": "Graphic design description"
+  },
+  "portfolio": {
+    "subTitle": "Voir some projects and designs",
+    "title": "Portfolio"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <section class="services-container">
+  <section class="section services-container">
     <v-container>
       <v-row class="py-5 py-md-8">
         <v-col cols="12">
