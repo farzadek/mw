@@ -38,6 +38,10 @@
   },
   "portfolio": {
     "subTitle": "Voir some projects and designs",
-    "title": "Portfolio"
+    "title": "Portfolio",
+    "gotoGraphicPortfolio":"Visit our Graphic design Porfolio page",
+    "gotoUiPortfolio":"Visit our Web design Porfolio page",
+    "graphicSectionTitle":"Design graphic (Infographie)",
+    "uiSectionTitle":"Design web (UI)"
   }
 }

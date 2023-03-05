@@ -9,13 +9,28 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/portfolio",
+    name: "portfolio",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(
+        /* webpackChunkName: "portfolio" */ "../views/portfolio/PortfolioIndex.vue"
+      ),
+  },
+  {
+    path: "/portfolio/graphic",
+    name: "portfolioGraphic",
+    component: () =>
+      import(
+        /* webpackChunkName: "portfolio-graphic" */ "../views/portfolio/PortfolioGraphic.vue"
+      ),
+  },
+  {
+    path: "/portfolio/ui",
+    name: "portfolioUi",
+    component: () =>
+      import(
+        /* webpackChunkName: "portfolio-ui" */ "../views/portfolio/PortfolioUi.vue"
+      ),
   },
 ];
 

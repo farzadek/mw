@@ -7,21 +7,62 @@
           <h2 class="section-title mb-6">{{ $t("portfolio.title") }}</h2>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row class="mb-12">
+        <h3 class="section-subtitle mb-3">
+          {{ $t("portfolio.graphicSectionTitle") }}
+        </h3>
         <v-col cols="12">
           <swiper
-            :slides-per-view="3"
-            :space-between="12"
+            :slides-per-view="slidesPerPage"
+            :space-between="16"
             navigation
             :pagination="{ clickable: true }"
             @swiper="onSwiper"
             @slideChange="onSlideChange"
           >
-            <swiper-slide v-for="slide in selectedFiles" :key="slide"
-              ><img
-                :src="`http://localhost:8888/mw-vue/portfolio/graphic/${slide}`"
-            /></swiper-slide>
-            <swiper-slide><a href="">go to portfolio</a></swiper-slide>
+            <swiper-slide v-once>
+              <v-card>
+                <v-btn to="/portfolio/graphic" variant="text">{{
+                  $t("portfolio.gotoGraphicPortfolio")
+                }}</v-btn>
+              </v-card>
+            </swiper-slide>
+            <swiper-slide v-for="slide in selectedFiles.graphic" :key="slide">
+              <v-card>
+                <img
+                  :src="`http://localhost:8888/mw-vue/portfolio/graphic/${slide}`"
+                />
+              </v-card>
+            </swiper-slide>
+          </swiper>
+        </v-col>
+      </v-row>
+      <v-row>
+        <h3 class="section-subtitle mb-3">
+          {{ $t("portfolio.uiSectionTitle") }}
+        </h3>
+        <v-col cols="12">
+          <swiper
+            :slides-per-view="slidesPerPage"
+            :space-between="16"
+            navigation
+            :pagination="{ clickable: true }"
+            @swiper="onSwiper"
+            @slideChange="onSlideChange"
+          >
+            <swiper-slide>
+              <v-card>
+                <v-btn to="/portfolio/ui" variant="text">{{
+                  $t("portfolio.gotoUiPortfolio")
+                }}</v-btn>
+              </v-card>
+            </swiper-slide>
+            <swiper-slide v-for="slide in selectedFiles.ui" :key="slide">
+              <v-card>
+                <img
+                  :src="`http://localhost:8888/mw-vue/portfolio/ui/${slide}`"
+                /> </v-card
+            ></swiper-slide>
           </swiper>
         </v-col>
       </v-row>
@@ -33,52 +74,44 @@
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 SwiperCore.use([Navigation]);
+import { mapGetters } from "vuex";
 export default {
   name: "portfolio-component",
   components: {
     Swiper,
     SwiperSlide,
   },
-  data() {
-    return {
-      files: undefined,
-      selectedFiles: [],
-      slidesPerPage: 1,
-    };
+  computed: {
+    ...mapGetters("portfolio", ["portfoliosPreview"]),
+    slidesPerPage() {
+      let result = 2;
+      if (this.$vuetify.display.smAndUp) result = 3;
+      if (this.$vuetify.display.lgAndUp) result = 4;
+      return result;
+    },
+    selectedFiles() {
+      return {
+        ui: this.$store.getters["portfolio/portfoliosPreview"]("ui"),
+        graphic: this.$store.getters["portfolio/portfoliosPreview"]("graphic"),
+      };
+    },
   },
   async mounted() {
-    let headers = new Headers();
-    this.files = await fetch("http://localhost:8888/mw-vue/api/filelist.php", {
-      method: "get",
-      headers: headers,
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        return data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    this.selectedFiles = [];
-    for (let i = 0; i < 3; i++) {
-      let photo =
-        this.files[Math.floor(Math.random() * this.files.length)].split("/");
-      this.selectedFiles.push(photo[photo.length - 1]);
+    if (this.selectedFiles.ui.length === 0) {
+      await this.$store.dispatch("portfolio/loadPortfolio", "ui");
+    }
+    if (this.selectedFiles.graphic.length === 0) {
+      await this.$store.dispatch("portfolio/loadPortfolio", "graphic");
     }
   },
   methods: {
-    onResize() {
-      this.windowSize = { x: window.innerWidth, y: window.innerHeight };
-    },
     onSwiper() {},
     onSlideChange() {},
   },
 };
 </script>
 <style lang="scss">
-@import "@/assets/styles/portfolio";
 @import "@/assets/styles/swiper.min.css";
 @import "@/assets/styles/navigation.min.css";
+@import "@/assets/styles/portfolio";
 </style>

@@ -1,9 +1,8 @@
 import { createStore } from "vuex";
+import portfolio from "./modules/portfolio";
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    portfolio,
+  },
 });

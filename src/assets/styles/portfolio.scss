@@ -1,6 +1,29 @@
 @import "./variables";
 .portfolio-container {
-    .carousel-container {
-        
+    .section-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+        color: $primaryColor1;
+    }
+    .swiper {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        .swiper-slide {
+            .v-card {
+                margin: 0.25em;
+                height: calc(100% - 0.5em);
+                box-shadow: 0 0 4px 0 transparentize($primaryColor1, 0.8);
+                img {
+                    width: 100%;
+                }
+                .v-btn {
+                    height: 100%;
+                    .v-btn__content{
+                        white-space: normal;
+                    }
+                }
+            }
+        }
     }
 }
