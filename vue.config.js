@@ -13,4 +13,14 @@ module.exports = defineConfig({
       fullInstall: true,
     },
   },
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: `
+          @import "@/assets/styles/swiper.min.css";
+          @import "@/assets/styles/navigation.min.css";
+        `,
+      },
+    },
+  },
 });

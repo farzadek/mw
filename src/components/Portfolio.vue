@@ -16,11 +16,10 @@
             :slides-per-view="slidesPerPage"
             :space-between="16"
             navigation
-            :pagination="{ clickable: true }"
             @swiper="onSwiper"
             @slideChange="onSlideChange"
           >
-            <swiper-slide v-once>
+            <swiper-slide>
               <v-card>
                 <v-btn to="/portfolio/graphic" variant="text">{{
                   $t("portfolio.gotoGraphicPortfolio")
@@ -46,7 +45,6 @@
             :slides-per-view="slidesPerPage"
             :space-between="16"
             navigation
-            :pagination="{ clickable: true }"
             @swiper="onSwiper"
             @slideChange="onSlideChange"
           >
@@ -111,7 +109,5 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/assets/styles/swiper.min.css";
-@import "@/assets/styles/navigation.min.css";
 @import "@/assets/styles/portfolio";
 </style>

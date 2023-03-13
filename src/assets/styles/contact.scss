@@ -1,1 +1,15 @@
 @import "./variables";
+.contact-form {
+    .captcha {
+        & > div {
+            margin: auto;
+        }
+    }
+}
+.submit-btn {
+    background-color: $primaryColor1;
+    color: #ffffff;
+    &:disabled {
+        color: transparentize($color: $primaryColor1, $amount: 0.65) !important;
+    }
+}

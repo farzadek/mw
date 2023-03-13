@@ -39,9 +39,13 @@
   "portfolio": {
     "subTitle": "Voir some projects and designs",
     "title": "Portfolio",
-    "gotoGraphicPortfolio":"Visit our Graphic design Porfolio page",
-    "gotoUiPortfolio":"Visit our Web design Porfolio page",
-    "graphicSectionTitle":"Design graphic (Infographie)",
-    "uiSectionTitle":"Design web (UI)"
+    "gotoGraphicPortfolio": "Visit our Graphic design Porfolio page",
+    "gotoUiPortfolio": "Visit our Web design Porfolio page",
+    "graphicSectionTitle": "Design graphic (Infographie)",
+    "uiSectionTitle": "Design web (UI)",
+    "packages_note1": "After 14days after official last website update.",
+    "packages_note2": "In Basic and Startup packages, one year webhost is included, but privilege and access codes will be kept for MontrealWeb company.",
+    "includedService": "Included services",
+    "packages_note3": "Complete Custom Pre-design and final graphical full-color Design, High End UI Design, Custom Coding and Development, Multi Lingual, Custom Dynamic Contact Form, Complete Database Creation, integration, Search Engine Submission"
   }
 }
