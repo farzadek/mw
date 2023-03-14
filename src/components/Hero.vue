@@ -15,6 +15,3 @@ export default {
   name: "hero-component",
 };
 </script>
-<style lang="scss">
-@import "@/assets/styles/hero";
-</style>

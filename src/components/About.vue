@@ -19,6 +19,3 @@ export default {
   name: "about-component",
 };
 </script>
-<style lang="scss">
-@import "@/assets/styles/about";
-</style>

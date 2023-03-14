@@ -28,7 +28,7 @@
             </swiper-slide>
             <swiper-slide v-for="slide in selectedFiles.graphic" :key="slide">
               <v-card>
-                <img
+                <v-lazy-image
                   :src="`http://localhost:8888/mw-vue/portfolio/graphic/${slide}`"
                 />
               </v-card>
@@ -57,10 +57,11 @@
             </swiper-slide>
             <swiper-slide v-for="slide in selectedFiles.ui" :key="slide">
               <v-card>
-                <img
+                <v-lazy-image
                   :src="`http://localhost:8888/mw-vue/portfolio/ui/${slide}`"
-                /> </v-card
-            ></swiper-slide>
+                />
+              </v-card>
+            </swiper-slide>
           </swiper>
         </v-col>
       </v-row>
@@ -72,12 +73,14 @@
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 SwiperCore.use([Navigation]);
+import VLazyImage from "v-lazy-image";
 import { mapGetters } from "vuex";
 export default {
   name: "portfolio-component",
   components: {
     Swiper,
     SwiperSlide,
+    VLazyImage,
   },
   computed: {
     ...mapGetters("portfolio", ["portfoliosPreview"]),
@@ -108,6 +111,3 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-@import "@/assets/styles/portfolio";
-</style>

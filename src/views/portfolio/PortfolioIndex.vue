@@ -4,9 +4,5 @@
   </div>
 </template>
 <script>
-export default {
-  mounted() {
-    this.$i18n.locale = "fr";
-  },
-};
+export default {};
 </script>

@@ -1,7 +1,6 @@
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
-
   pluginOptions: {
     i18n: {
       locale: "en",
@@ -19,6 +18,7 @@ module.exports = defineConfig({
         additionalData: `
           @import "@/assets/styles/swiper.min.css";
           @import "@/assets/styles/navigation.min.css";
+          @import "@/assets/styles/app.scss";
         `,
       },
     },

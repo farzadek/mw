@@ -37,15 +37,50 @@
     "graphicDescription": "Graphic design description"
   },
   "portfolio": {
-    "subTitle": "Voir some projects and designs",
+    "subTitle": "See some projects and designs",
     "title": "Portfolio",
     "gotoGraphicPortfolio": "Visit our Graphic design Porfolio page",
     "gotoUiPortfolio": "Visit our Web design Porfolio page",
-    "graphicSectionTitle": "Design graphic (Infographie)",
-    "uiSectionTitle": "Design web (UI)",
+    "graphicSectionTitle": "Graphic design",
+    "uiSectionTitle": "Web design (UI)"
+  },
+  "packages": {
+    "subTitle": "See some projects and designs",
+    "title": "Packages",
+    "simple": "Simple",
+    "small": "Small size Business",
+    "medium": "Business level",
+    "price": "From {price} $",
     "packages_note1": "After 14days after official last website update.",
     "packages_note2": "In Basic and Startup packages, one year webhost is included, but privilege and access codes will be kept for MontrealWeb company.",
     "includedService": "Included services",
-    "packages_note3": "Complete Custom Pre-design and final graphical full-color Design, High End UI Design, Custom Coding and Development, Multi Lingual, Custom Dynamic Contact Form, Complete Database Creation, integration, Search Engine Submission"
+    "packages_note3": "Complete Custom Pre-design and final graphical full-color Design, High End UI Design, Custom Coding and Development, Multi Lingual, Custom Dynamic Contact Form, Complete Database Creation, integration, Search Engine Submission",
+    "includes": {
+      "pageCount": "Page Website {page} Page and multiple section",
+      "contactForm": "Contact form",
+      "revisionDesign": "{no} Revision",
+      "responsive": "Responsive design",
+      "seo": "SEO friendly",
+      "optimize": "Image optimization",
+      "satisfaction": "Satisfaction Guarantee",
+      "host": "1 year free Host",
+      "secure": "Secure website (https)",
+      "manage": "Project management and progress tracking",
+      "sitemap": "Google friendly sitemap"
+    }
+  },
+  "contact": {
+    "subTitle": "Want to talk to me?",
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "required": "This field is required",
+    "emailFormatErr": "Please enter a valid email",
+    "lengthErr": "Invalid character length, required min. {length} characters",
+    "phoneErr": "Phone number is not correct",
+    "sendMailErr": "Email not send, try later!",
+    "sendMailSuccess":"Email sent successfully!"
   }
 }
