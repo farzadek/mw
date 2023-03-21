@@ -3,6 +3,8 @@
     "about": "À propos",
     "services": "Services",
     "portfolio": "Portfolio",
+    "portfolioGr": "UI",
+    "portfolioUi": "Infographie",
     "packages": "Packages",
     "blog": "Blog",
     "contact": "Contact",
@@ -42,7 +44,24 @@
     "gotoGraphicPortfolio": "Visit our Graphic design Porfolio page",
     "gotoUiPortfolio": "Visit our Web design Porfolio page",
     "graphicSectionTitle": "Graphic design",
-    "uiSectionTitle": "Web design (UI)"
+    "uiSectionTitle": "Web design (UI)",
+    "uiSections": {
+      "hair": "Hair Style saloon",
+      "massage": "Massage",
+      "office": "Local entreprises",
+      "sport": "Sport",
+      "construction": "Construction",
+      "advocate": "Advocat",
+      "medic": "Medicines et trapists",
+      "building": "Residene buldings",
+      "personal": "Personal/portfolio",
+      "restaurent": "Restaurent",
+      "business": "Small businesses",
+      "food": "Katering",
+      "kindergarten": "Kindergarten",
+      "appartment": "Appartment",
+      "beauty": "Salle de bauté"
+    }
   },
   "packages": {
     "subTitle": "See some projects and designs",
@@ -81,6 +100,6 @@
     "lengthErr": "Invalid character length, required min. {length} characters",
     "phoneErr": "Phone number is not correct",
     "sendMailErr": "Email not send, try later!",
-    "sendMailSuccess":"Email sent successfully!"
+    "sendMailSuccess": "Email sent successfully!"
   }
 }

@@ -1,20 +1,22 @@
-<?php 
+<?php
 header("Access-Control-Allow-Origin: *");
 $category = $_GET['cat'];
-function getDirContents($dir, $filter = '', &$results = array()) {
+function getDirContents($dir, $filter = '', &$results = array())
+{
     $files = scandir($dir);
-
-    foreach($files as $key => $value){
-        $path = realpath($dir.DIRECTORY_SEPARATOR.$value); 
-
-        if(!is_dir($path)) {
-            if(empty($filter) || preg_match($filter, $path)) $results[] = $path;
-        } elseif($value != "." && $value != "..") {
-            getDirContents($path, $filter, $results);
-        }
+    array_splice($files, 0, 3);
+    shuffle($files);
+    $i = 0;
+    $result = [];
+    while ($i < sizeof($files)) {
+        $tmp = getimagesize($dir . '/' . $files[$i]);
+        array_push($result, (object)[
+            'url' => $files[$i],
+            'width' => $tmp[0],
+            'height' => $tmp[1],
+        ]);
+        $i++;
     }
-
-    return json_encode($results);
-} 
-echo getDirContents('../portfolio/'.$category);
-?>
+    return json_encode($result);
+}
+echo getDirContents('../portfolio/' . $category);

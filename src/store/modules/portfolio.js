@@ -1,38 +1,49 @@
-import { getRandomNumbers } from "../../plugins/tools";
+import { uniqueArray } from "../../plugins/tools";
 
 const state = () => ({
   portfolios: { ui: [], graphic: [] },
-  portfoliosPreview: { ui: [], graphic: [] },
+  uiSections: [],
 });
 
 // getters
 const getters = {
   portfoliosPreview: (state) => (category) => {
-    return state.portfoliosPreview[category];
+    return state.portfolios[category].slice(0, 3);
+  },
+  portfoliosList: (state) => (category) => {
+    return state.portfolios[category];
+  },
+  uiSections: (state) => {
+    return state.uiSections;
   },
 };
 
 // actions
 const actions = {
-  async loadPortfolio({ commit }, category) {
-    let headers = new Headers();
-    const content = await fetch(
-      `http://localhost:8888/mw-vue/api/filelist.php?cat=${category}`,
-      {
-        method: "get",
-        headers: headers,
+  async loadPortfolio({ state, commit }, category) {
+    if (state.portfolios[category].length === 0) {
+      let headers = new Headers();
+      const content = await fetch(
+        `http://localhost:8888/mw-vue/api/filelist.php?cat=${category}`,
+        {
+          method: "get",
+          headers: headers,
+        }
+      )
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          return data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      commit("setPortfolios", { category, content });
+      if (category === "ui") {
+        commit("setUiSections", { content });
       }
-    )
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        return data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    commit("setPortfolios", { category, content });
+    }
   },
 };
 
@@ -40,15 +51,11 @@ const actions = {
 const mutations = {
   setPortfolios(state, payload) {
     state.portfolios[payload.category] = payload.content;
-
-    const previewItemsCount = 3;
-    let theItems = [];
-    const uino = getRandomNumbers(state.portfolios[payload.category].length, 3);
-    for (let i = 0; i < previewItemsCount; i++) {
-      let photo = state.portfolios[payload.category][uino[i]].split("/");
-      theItems.push(photo[photo.length - 1]);
-    }
-    state.portfoliosPreview[payload.category] = theItems;
+  },
+  setUiSections(state, payload) {
+    let items = payload.content.map((el) => el.url.slice(0, -6));
+    var outputArray = uniqueArray(items);
+    state.uiSections = outputArray;
   },
 };
 

@@ -8,4 +8,11 @@ function getRandomNumbers(max, count, min = 0) {
   }
   return selected;
 }
-export { getRandomNumbers };
+function uniqueArray(arr) {
+  let outputArray = arr.filter(function (v, i, self) {
+    return i == self.indexOf(v);
+  });
+
+  return outputArray;
+}
+export { getRandomNumbers, uniqueArray };

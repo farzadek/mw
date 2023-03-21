@@ -1,19 +1,22 @@
 header {
   z-index: 900 !important;
-    .v-row {
-      align-items: center;
+  .v-row {
+    align-items: center;
+  }
+  .logo-title-box {
+    display: flex;
+    align-items: center;
+    img {
+      height: 45px;
+      margin-left: 0.8em;
     }
-    .logo-title-box {
-      display: flex;
-      align-items: center;
-      img {
-        height: 45px;
-        margin-left: 0.8em;
-      }
-      .logo-title {
-        font-family: $secondaryFont;
-        font-size: 1.75em;
-        font-weight: bold;
-      }
+    .logo-title {
+      font-family: $secondaryFont;
+      font-size: 1.75em;
+      font-weight: bold;
     }
   }
+}
+.v-navigation-drawer {
+  top: 0 !important;
+}

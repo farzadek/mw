@@ -1,0 +1,57 @@
+.graphicFolio-container {
+    position: relative;
+    .v-progress-circular {
+        position: absolute;
+        top: 50%;
+    }
+    .portfolio-box {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+
+        .col-box {
+            max-width: calc(50% - 1em);
+            flex: 0 0 calc(50% - 1em);
+            .v-card {
+                width: 100%;
+                margin-bottom: 1em;
+                padding: 0.25em;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    display: block;
+                }
+            }
+        }
+        @media (min-width: $sm) {
+            .col-box {
+                max-width: calc(33.3% - 1em);
+                flex: 0 0 calc(33.3% - 1em);
+            }
+        }
+        @media (min-width: $lg) {
+            gap: 1.25em;
+            .col-box {
+                max-width: calc(25% - 1.25em);
+                flex: 0 0 calc(25% - 1.25em);
+            }
+        }
+    }
+}
+.previwDesignDialog {
+    background-color: transparentize($color: #ffffff, $amount: .1);
+    .v-card {
+        align-items: center;
+        justify-content: center;
+        background-color: transparentize($primaryColor1, .9);
+        .v-btn {
+            position: absolute;
+            right: 0.5em;
+            top: 0.5em;
+            z-index: 1;
+        }
+        img {
+        }
+    }
+}

@@ -17,17 +17,53 @@
           icon="mdi-menu"
         ></v-app-bar-nav-icon>
         <div class="d-none d-md-flex">
-          <v-btn v-for="item in appbarItems" :key="item">{{
-            $t(`appbar.${item}`)
-          }}</v-btn>
+          <v-btn>{{ $t("appbar.about") }}</v-btn>
+          <v-btn>{{ $t("appbar.services") }}</v-btn>
+          <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn v-bind="props"
+                >{{ $t("appbar.portfolio")
+                }}<v-icon>mdi mdi-menu-down</v-icon></v-btn
+              >
+            </template>
+            <v-list>
+              <v-list-item>
+                <v-btn variant="plain" block href="/portfolio/graphic">{{
+                  $t("appbar.portfolioGr")
+                }}</v-btn>
+              </v-list-item>
+              <v-list-item>
+                <v-btn variant="plain" block href="/portfolio/ui">{{
+                  $t("appbar.portfolioUi")
+                }}</v-btn>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+          <v-btn>{{ $t("appbar.packages") }}</v-btn>
+          <v-btn>{{ $t("appbar.contact") }}</v-btn>
         </div>
       </v-row>
     </v-container>
   </v-app-bar>
   <v-navigation-drawer v-model="drawer" absolute temporary>
     <v-list nav dense>
-      <v-list-item v-for="item in appbarItems" :key="item">
-        <v-btn variant="text">{{ $t(`appbar.${item}`) }}</v-btn>
+      <v-list-item>
+        <v-btn variant="plain" block>{{ $t("appbar.about") }}</v-btn>
+      </v-list-item>
+
+      <v-btn variant="plain" block>{{ $t("appbar.services") }}</v-btn>
+      <v-btn variant="plain" block>{{ $t("appbar.packages") }}</v-btn>
+      <v-btn variant="plain" block>{{ $t("appbar.contact") }}</v-btn>
+      <v-divider></v-divider>
+      <v-list-item>
+        <router-link to="/portfolio/graphic">{{
+          $t("appbar.portfolioGr")
+        }}</router-link>
+      </v-list-item>
+      <v-list-item>
+        <router-link to="/portfolio/ui">{{
+          $t("appbar.portfolioUi")
+        }}</router-link>
       </v-list-item>
     </v-list>
     <v-btn
@@ -47,14 +83,6 @@ export default {
     return {
       drawer: false,
       logo: Logo,
-      appbarItems: [
-        "about",
-        "services",
-        "portfolio",
-        "packages",
-        "blog",
-        "contact",
-      ],
     };
   },
 };

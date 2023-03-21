@@ -29,7 +29,7 @@
             <swiper-slide v-for="slide in selectedFiles.graphic" :key="slide">
               <v-card>
                 <v-lazy-image
-                  :src="`http://localhost:8888/mw-vue/portfolio/graphic/${slide}`"
+                  :src="`http://localhost:8888/mw-vue/portfolio/graphic/${slide.url}`"
                 />
               </v-card>
             </swiper-slide>
@@ -58,7 +58,7 @@
             <swiper-slide v-for="slide in selectedFiles.ui" :key="slide">
               <v-card>
                 <v-lazy-image
-                  :src="`http://localhost:8888/mw-vue/portfolio/ui/${slide}`"
+                  :src="`http://localhost:8888/mw-vue/portfolio/ui/${slide.url}`"
                 />
               </v-card>
             </swiper-slide>
@@ -98,12 +98,8 @@ export default {
     },
   },
   async mounted() {
-    if (this.selectedFiles.ui.length === 0) {
-      await this.$store.dispatch("portfolio/loadPortfolio", "ui");
-    }
-    if (this.selectedFiles.graphic.length === 0) {
-      await this.$store.dispatch("portfolio/loadPortfolio", "graphic");
-    }
+    await this.$store.dispatch("portfolio/loadPortfolio", "ui");
+    await this.$store.dispatch("portfolio/loadPortfolio", "graphic");
   },
   methods: {
     onSwiper() {},

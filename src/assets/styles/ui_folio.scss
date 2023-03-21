@@ -1,0 +1,74 @@
+.uiFolio-container {
+    position: relative;
+    .v-progress-circular {
+        position: absolute;
+        top: 50%;
+    }
+    .sections-box {
+        .v-checkbox {
+            display: inline-block;
+            margin: 0 0.75em 0.75em 0;
+            color: $primaryColor1;
+            padding: 0 0.75em;
+            border-radius: 2em;
+            border: 2px solid $primaryColor1;
+            font-weight: 500;
+            label {
+                opacity: 1;
+                font-size: 1.1em;
+            }
+            &.selected {
+                background-color: $primaryColor1;
+                color: #ffffff;
+            }
+            .v-selection-control__wrapper {
+                display: none;
+            }
+        }
+    }
+    .portfolio-box {
+        display: flex;
+        gap: 1.5em;
+        flex-wrap: wrap;
+
+        .col-box {
+            max-width: calc(50% - 1.5em);
+            flex: 0 0 calc(50% - 1.5em);
+            .v-card {
+                width: 100%;
+                margin-bottom: 2em;
+                padding: 0.25em;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    display: block;
+                }
+            }
+        }
+        @media (min-width: $md) {
+            .col-box {
+                max-width: calc(25% - 1.5em);
+                flex: 0 0 calc(25% - 1.5em);
+            }
+        }
+    }
+}
+.previwUiDialog {
+    background-color: transparentize($color: #ffffff, $amount: 0.1);
+    .v-card {
+        align-items: center;
+        justify-content: flex-start;
+        background-color: transparentize($primaryColor1, 0.9);
+        padding: 1em;
+        .v-btn {
+            position: fixed;
+            right: 0.5em;
+            top: 0.5em;
+            z-index: 1;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}

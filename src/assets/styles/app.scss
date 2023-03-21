@@ -1,6 +1,7 @@
 @import "./variables";
 body {
     padding-top: 64px;
+    overflow-x: hidden;
 }
 @import "./about.scss";
 @import "./appbar.scss";
@@ -9,4 +10,6 @@ body {
 @import "./packages";
 @import "./portfolio";
 @import "./services";
+@import "./graphic_folio";
+@import "./ui_folio";
 
