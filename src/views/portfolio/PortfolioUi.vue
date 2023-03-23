@@ -9,7 +9,7 @@
       ></v-progress-circular>
     </v-overlay>
     <v-container>
-      <v-row class="py-5">
+      <v-row class="py-lg-5">
         <v-col cols="12">
           <h3 class="section-subtitle mb-1">{{ $t("portfolio.title") }}</h3>
           <h2 class="section-title mb-6">
@@ -83,15 +83,13 @@
       </v-row>
     </v-container>
 
-    <v-dialog class="previwUiDialog" v-model="showDialog" fullscreen scrollable>
-      <v-card @click="showDialog = false">
-        <!-- <v-btn @click="showDialog = false"><v-icon>mdi-close</v-icon></v-btn> -->
+    <v-dialog class="previwUiDialog" v-model="showDialog" fullscreen>
+      <div @click="showDialog = false" class="image-container">
+        <v-btn @click="showDialog = false"><v-icon>mdi-close</v-icon></v-btn>
         <img
-          :width="fullViwFile.width"
-          :height="fullViwFile.height"
           :src="`http://localhost:8888/mw-vue/portfolio/ui/${fullViwFile.url}`"
         />
-      </v-card>
+      </div>
     </v-dialog>
   </section>
 </template>
