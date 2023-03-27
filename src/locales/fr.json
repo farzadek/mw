@@ -46,21 +46,17 @@
     "graphicSectionTitle": "Graphic design",
     "uiSectionTitle": "Web design (UI)",
     "uiSections": {
-      "hair": "Hair Style saloon",
       "massage": "Massage",
-      "office": "Local entreprises",
       "sport": "Sport",
       "construction": "Construction",
-      "advocate": "Advocat",
-      "medic": "Medicines et trapists",
-      "building": "Residene buldings",
-      "personal": "Personal/portfolio",
-      "restaurent": "Restaurent",
-      "business": "Small businesses",
-      "food": "Katering",
-      "kindergarten": "Kindergarten",
-      "appartment": "Appartment",
-      "beauty": "Salle de bauté"
+      "advocate": "Avocat",
+      "medic": "Médicaments et thérapeutes",
+      "building": "Résidences",
+      "personal": "Personnelle",
+      "restaurant": "Restaurant",
+      "office": "Petites entreprises",
+      "kindergarten": "Garderie",
+      "beauty": "Salon de beauté"
     }
   },
   "packages": {

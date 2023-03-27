@@ -42,7 +42,7 @@
               @click="viewFile(fileName)"
             >
               <v-lazy-image
-                :src="`http://localhost:8888/mw-vue/portfolio/ui/${fileName.url}`"
+                :src="`${$store.getters['common/baseUrl']}/portfolio/ui/${fileName.url}`"
               />
             </v-card>
           </div>
@@ -53,7 +53,7 @@
               @click="viewFile(fileName)"
             >
               <v-lazy-image
-                :src="`http://localhost:8888/mw-vue/portfolio/ui/${fileName.url}`"
+                :src="`${$store.getters['common/baseUrl']}/portfolio/ui/${fileName.url}`"
               />
             </v-card>
           </div>
@@ -64,7 +64,7 @@
               @click="viewFile(fileName)"
             >
               <v-lazy-image
-                :src="`http://localhost:8888/mw-vue/portfolio/ui/${fileName.url}`"
+                :src="`${$store.getters['common/baseUrl']}/portfolio/ui/${fileName.url}`"
               />
             </v-card>
           </div>
@@ -75,7 +75,7 @@
               @click="viewFile(fileName)"
             >
               <v-lazy-image
-                :src="`http://localhost:8888/mw-vue/portfolio/ui/${fileName.url}`"
+                :src="`${$store.getters['common/baseUrl']}/portfolio/ui/${fileName.url}`"
               />
             </v-card>
           </div>
@@ -84,11 +84,9 @@
     </v-container>
 
     <v-dialog class="previwUiDialog" v-model="showDialog" fullscreen>
-      <div @click="showDialog = false" class="image-container">
+      <div class="image-container">
         <v-btn @click="showDialog = false"><v-icon>mdi-close</v-icon></v-btn>
-        <img
-          :src="`http://localhost:8888/mw-vue/portfolio/ui/${fullViwFile.url}`"
-        />
+        <img :src="fullViwFile.urlView" :onerror="loadAlternative" />
       </div>
     </v-dialog>
   </section>
@@ -104,6 +102,7 @@ export default {
   },
   computed: {
     ...mapGetters("portfolio", ["portfoliosList, uiSections"]),
+    ...mapGetters("common", ["baseUrl"]),
     portfolioToViewFiles() {
       const selected = this.uiSections.filter((el) => el.selected);
       return this.fillColumns(selected);
@@ -113,7 +112,7 @@ export default {
     return {
       showProgress: false,
       showDialog: false,
-      fullViwFile: null,
+      fullViwFile: {},
       portfolioFiles: [],
       uiSections: [],
     };
@@ -181,7 +180,13 @@ export default {
     },
     viewFile(filename) {
       this.showDialog = true;
-      this.fullViwFile = filename;
+      this.fullViwFile.urlView = `${this.$store.getters["common/baseUrl"]}/portfolio/origin/ui/${filename.url}`;
+      this.fullViwFile.url = `${this.$store.getters["common/baseUrl"]}/portfolio/ui/${filename.url}`;
+      this.fullViwFile.height = filename.height;
+      this.fullViwFile.width = filename.width;
+    },
+    loadAlternative() {
+      this.fullViwFile.urlView = this.fullViwFile.url;
     },
   },
 };
