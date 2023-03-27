@@ -19,4 +19,23 @@ header {
 }
 .v-navigation-drawer {
   top: 0 !important;
+  .v-expansion-panels {
+    .v-expansion-panel-title {
+      justify-content: center;
+      min-height: unset;
+      opacity: .62;
+      .v-expansion-panel-title__icon {
+        margin-inline-start: unset;
+      }
+      .v-expansion-panel-title__overlay {
+        opacity: 0;
+      }
+    }
+    .v-expansion-panel-text {
+      a {
+        text-decoration: none;
+        color: transparentize($color: #000000, $amount: .28);
+      }
+    }
+  }
 }

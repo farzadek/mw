@@ -53,22 +53,29 @@
 
       <v-btn variant="plain" block>{{ $t("appbar.services") }}</v-btn>
       <v-btn variant="plain" block>{{ $t("appbar.packages") }}</v-btn>
+      <v-expansion-panels>
+        <v-expansion-panel :title="$t('appbar.portfolio')" elevation="0">
+          <v-expansion-panel-text>
+            <v-btn block variant="plain">
+              <router-link to="/portfolio/graphic">{{
+                $t("appbar.portfolioGr")
+              }}</router-link>
+            </v-btn>
+            <v-btn block variant="plain">
+              <router-link to="/portfolio/ui">{{
+                $t("appbar.portfolioUi")
+              }}</router-link>
+            </v-btn>
+            <v-divider></v-divider>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+      </v-expansion-panels>
       <v-btn variant="plain" block>{{ $t("appbar.contact") }}</v-btn>
-      <v-divider></v-divider>
-      <v-list-item>
-        <router-link to="/portfolio/graphic">{{
-          $t("appbar.portfolioGr")
-        }}</router-link>
-      </v-list-item>
-      <v-list-item>
-        <router-link to="/portfolio/ui">{{
-          $t("appbar.portfolioUi")
-        }}</router-link>
-      </v-list-item>
     </v-list>
     <v-btn
-      class="ml-3 mt-4"
-      variant="text"
+      class="mt-4"
+      variant="plain"
+      block
       @click="$root.$i18n.locale = $t('appbar.lang')"
       >{{ $t("appbar.lang") }}
     </v-btn>
