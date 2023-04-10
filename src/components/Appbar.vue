@@ -17,11 +17,17 @@
           icon="mdi-menu"
         ></v-app-bar-nav-icon>
         <div class="d-none d-md-flex">
-          <v-btn>{{ $t("appbar.about") }}</v-btn>
-          <v-btn>{{ $t("appbar.services") }}</v-btn>
+          <v-btn @click="scrollToAnchorPoint('aboutSection')">{{
+            $t("appbar.about")
+          }}</v-btn>
+          <v-btn @click="scrollToAnchorPoint('servicesSection')">{{
+            $t("appbar.services")
+          }}</v-btn>
           <v-menu>
             <template v-slot:activator="{ props }">
-              <v-btn v-bind="props"
+              <v-btn
+                v-bind="props"
+                @click="scrollToAnchorPoint('portfolioSection')"
                 >{{ $t("appbar.portfolio")
                 }}<v-icon>mdi mdi-menu-down</v-icon></v-btn
               >
@@ -39,8 +45,12 @@
               </v-list-item>
             </v-list>
           </v-menu>
-          <v-btn>{{ $t("appbar.packages") }}</v-btn>
-          <v-btn>{{ $t("appbar.contact") }}</v-btn>
+          <v-btn @click="scrollToAnchorPoint('packagesSection')">{{
+            $t("appbar.packages")
+          }}</v-btn>
+          <v-btn @click="scrollToAnchorPoint('contactSection')">{{
+            $t("appbar.contact")
+          }}</v-btn>
         </div>
       </v-row>
     </v-container>
@@ -48,11 +58,26 @@
   <v-navigation-drawer v-model="drawer" absolute temporary>
     <v-list nav dense>
       <v-list-item>
-        <v-btn variant="plain" block>{{ $t("appbar.about") }}</v-btn>
+        <v-btn
+          variant="plain"
+          block
+          @click="scrollToAnchorPoint('aboutSection')"
+          >{{ $t("appbar.about") }}</v-btn
+        >
       </v-list-item>
 
-      <v-btn variant="plain" block>{{ $t("appbar.services") }}</v-btn>
-      <v-btn variant="plain" block>{{ $t("appbar.packages") }}</v-btn>
+      <v-btn
+        variant="plain"
+        block
+        @click="scrollToAnchorPoint('servicesSection')"
+        >{{ $t("appbar.services") }}</v-btn
+      >
+      <v-btn
+        variant="plain"
+        block
+        @click="scrollToAnchorPoint('packagesSection')"
+        >{{ $t("appbar.packages") }}</v-btn
+      >
       <v-expansion-panels>
         <v-expansion-panel :title="$t('appbar.portfolio')" elevation="0">
           <v-expansion-panel-text>
@@ -70,13 +95,21 @@
           </v-expansion-panel-text>
         </v-expansion-panel>
       </v-expansion-panels>
-      <v-btn variant="plain" block>{{ $t("appbar.contact") }}</v-btn>
+      <v-btn
+        @click="scrollToAnchorPoint('contactSection')"
+        variant="plain"
+        block
+        >{{ $t("appbar.contact") }}</v-btn
+      >
     </v-list>
     <v-btn
       class="mt-4"
       variant="plain"
       block
-      @click="$root.$i18n.locale = $t('appbar.lang')"
+      @click="
+        $root.$i18n.locale = $t('appbar.lang');
+        drawer = false;
+      "
       >{{ $t("appbar.lang") }}
     </v-btn>
   </v-navigation-drawer>
@@ -91,6 +124,13 @@ export default {
       drawer: false,
       logo: Logo,
     };
+  },
+  methods: {
+    scrollToAnchorPoint(refName) {
+      const el = document.getElementById(refName);
+      el.scrollIntoView({ behavior: "smooth" });
+      this.drawer = false;
+    },
   },
 };
 </script>

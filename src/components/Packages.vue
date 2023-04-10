@@ -1,5 +1,5 @@
 <template>
-  <section class="section packages-container">
+  <section class="section packages-container" id="packagesSection">
     <v-container>
       <v-row class="py-5 py-md-8">
         <v-col cols="12">

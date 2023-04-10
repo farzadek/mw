@@ -18,7 +18,7 @@ header {
   }
 }
 .v-navigation-drawer {
-  top: 0 !important;
+  position: fixed !important;
   .v-expansion-panels {
     .v-expansion-panel-title {
       justify-content: center;

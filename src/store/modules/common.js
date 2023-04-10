@@ -5,7 +5,7 @@ const state = () => ({
 // getters
 const getters = {
   baseUrl: () =>
-    process.env.NODE_ENV === "xproduction"
+    process.env.NODE_ENV === "production"
       ? "https://montrealweb.ca"
       : "http://localhost:8888/mw-vue",
 };

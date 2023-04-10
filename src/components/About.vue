@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="section about-section">
+  <section class="section about-section" id="aboutSection">
     <v-container>
       <v-row class="py-5 py-md-8 justify-center">
         <v-col cols="12" sm="10" md="9" lg="8">

@@ -1,5 +1,5 @@
 <template>
-  <section class="section portfolio-container">
+  <section class="section portfolio-container" id="portfolioSection">
     <v-container>
       <v-row class="py-5 py-md-8">
         <v-col cols="12">
@@ -29,7 +29,7 @@
             <swiper-slide v-for="slide in selectedFiles.graphic" :key="slide">
               <v-card>
                 <v-lazy-image
-                  :src="`http://localhost:8888/mw-vue/portfolio/graphic/${slide.url}`"
+                  :src="`${$store.getters['common/baseUrl']}/portfolio/graphic/${slide.url}`"
                 />
               </v-card>
             </swiper-slide>
@@ -58,7 +58,7 @@
             <swiper-slide v-for="slide in selectedFiles.ui" :key="slide">
               <v-card>
                 <v-lazy-image
-                  :src="`http://localhost:8888/mw-vue/portfolio/ui/${slide.url}`"
+                  :src="`${$store.getters['common/baseUrl']}/portfolio/ui/${slide.url}`"
                 />
               </v-card>
             </swiper-slide>
@@ -84,6 +84,7 @@ export default {
   },
   computed: {
     ...mapGetters("portfolio", ["portfoliosPreview"]),
+    ...mapGetters("common", ["baseUrl"]),
     slidesPerPage() {
       let result = 2;
       if (this.$vuetify.display.smAndUp) result = 3;

@@ -1,5 +1,5 @@
 <template>
-  <section class="section contact-container">
+  <section class="section contact-container" id="contactSection">
     <v-container>
       <v-row class="py-5 py-md-8">
         <v-col cols="12">
@@ -33,7 +33,6 @@
             ></v-text-field>
             <v-text-field
               v-model="contactForm.phone"
-              :rules="[rules.phone]"
               :label="$t('contact.phone')"
               variant="outlined"
               class="mb-4"
@@ -51,7 +50,6 @@
             <div class="d-flex mb-4">
               <v-text-field
                 v-model="recaptchaValue"
-                :rules="[rules.phone]"
                 :label="$t('contact.captcha')"
                 variant="outlined"
                 class="mb-4"

@@ -20,11 +20,11 @@ const getters = {
 
 // actions
 const actions = {
-  async loadPortfolio({ state, commit }, category) {
+  async loadPortfolio({ state, commit, rootGetters }, category) {
     if (state.portfolios[category].length === 0) {
       let headers = new Headers();
       const content = await fetch(
-        `http://localhost:8888/mw-vue/api/filelist.php?cat=${category}`,
+        `${rootGetters["common/baseUrl"]}/api/filelist.php?cat=${category}`,
         {
           method: "get",
           headers: headers,
