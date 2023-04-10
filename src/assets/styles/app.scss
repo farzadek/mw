@@ -1,10 +1,12 @@
+@import "./recaptcha";
 @import "./variables";
 body {
     padding-top: 64px;
     overflow-x: hidden;
 }
-@import "./about.scss";
-@import "./appbar.scss";
+@import "./about";
+@import "./appbar";
+@import "./footer";
 @import "./contact";
 @import "./hero";
 @import "./packages";
@@ -12,4 +14,3 @@ body {
 @import "./services";
 @import "./graphic_folio";
 @import "./ui_folio";
-

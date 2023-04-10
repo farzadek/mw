@@ -47,17 +47,26 @@
               rows="3"
               class="mb-4"
             ></v-textarea>
-            <VueRecaptcha
-              :sitekey="siteKey"
-              :load-recaptcha-script="true"
-              @verify="captchaVerified = true"
-              @error="captchaVerified = false"
-              class="mb-6 captcha"
-            ></VueRecaptcha>
+
+            <div class="d-flex mb-4">
+              <v-text-field
+                v-model="recaptchaValue"
+                :rules="[rules.phone]"
+                :label="$t('contact.captcha')"
+                variant="outlined"
+                class="mb-4"
+              ></v-text-field>
+              <VueClientRecaptcha
+                :value="recaptchaValue"
+                @getCode="getCaptchaCode"
+                @isValid="checkValidCaptcha"
+              />
+            </div>
+
             <v-btn
               type="submit"
               class="submit-btn"
-              :disabled="!captchaVerified"
+              :disabled="!recaptchaData.isValid"
               block
               @click="submitContact"
               >submit</v-btn
@@ -70,22 +79,27 @@
 </template>
 
 <script>
-import { VueRecaptcha } from "vue-recaptcha";
+import { ref, reactive } from "vue";
+import VueClientRecaptcha from "vue-client-recaptcha";
+import { mapGetters } from "vuex";
 export default {
   name: "Contact-component",
   components: {
-    VueRecaptcha,
+    VueClientRecaptcha,
   },
   data() {
     return {
-      siteKey: "6LcF3uIkAAAAAJAjETCCM22xcLPbopZ67N1nDLns",
       contactForm: {
         name: null,
         email: null,
         phone: null,
         message: null,
       },
-      captchaVerified: false,
+      recaptchaValue: ref(null),
+      recaptchaData: reactive({
+        captchaCode: null,
+        isValid: false,
+      }),
       formResult: { text: null, type: "error" },
       rules: {
         email: (v) =>
@@ -102,6 +116,9 @@ export default {
       },
     };
   },
+  computed: {
+    ...mapGetters("common", ["baseUrl"]),
+  },
   methods: {
     async submitContact() {
       const isValid = await this.$refs.contact.validate();
@@ -109,10 +126,16 @@ export default {
         this.sendEmail();
       }
     },
+    getCaptchaCode(value) {
+      this.recaptchaData.captchaCode = value;
+    },
+    checkValidCaptcha(value) {
+      this.recaptchaData.isValid = value;
+    },
     async sendEmail() {
       const headers = new Headers();
       const result = await fetch(
-        `${process.env.CURRENT_BASE_HOST}sendMail.php?name=${this.contactForm.name}&email=${this.contactForm.email}&phone=${this.contactForm.phone}&message=${this.contactForm.message}&lang=${this.$i18n.locale}`,
+        `${this.$store.getters["common/baseUrl"]}/api/sendMail.php?name=${this.contactForm.name}&email=${this.contactForm.email}&phone=${this.contactForm.phone}&message=${this.contactForm.message}&lang=${this.$i18n.locale}`,
         {
           method: "POST",
           headers,
@@ -141,9 +164,6 @@ export default {
       setTimeout(() => {
         this.formResult.text = null;
       }, 7500);
-    },
-    handleSuccess(response) {
-      console.log(response);
     },
   },
 };

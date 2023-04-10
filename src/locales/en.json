@@ -54,7 +54,7 @@
       "medic": "Medicines and therapists",
       "building": "Residences",
       "personal": "Personal",
-      "restaurent": "Restaurent",
+      "restaurant": "Restaurent",
       "office": "Small businesses",
       "kindergarten": "Kindergarten",
       "beauty": "Beauty salon"
@@ -72,7 +72,7 @@
     "includedService": "Included services",
     "packages_note3": "Complete Custom Pre-design and final graphical full-color Design, High End UI Design, Custom Coding and Development, Multi Lingual, Custom Dynamic Contact Form, Complete Database Creation, integration, Search Engine Submission",
     "includes": {
-      "pageCount": "Page Website {page} Page and multiple section",
+      "pageCount": "Website inlude {page} Page and multiple section",
       "contactForm": "Contact form",
       "revisionDesign": "{no} Revision",
       "responsive": "Responsive design",
@@ -92,6 +92,7 @@
     "email": "Email",
     "phone": "Phone",
     "message": "Message",
+    "captcha": "Type what you see here",
     "required": "This field is required",
     "emailFormatErr": "Please enter a valid email",
     "lengthErr": "Invalid character length, required min. {length} characters",

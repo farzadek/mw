@@ -1,14 +1,13 @@
 .contact-form {
-    .captcha {
-        & > div {
-            margin: auto;
-        }
+    .vue_client_recaptcha {
+        height: 56px;
+        margin-left: 0.5em;
     }
-}
-.submit-btn {
-    background-color: $primaryColor1;
-    color: #ffffff;
-    &:disabled {
-        color: transparentize($color: $primaryColor1, $amount: 0.65) !important;
+    .submit-btn {
+        background-color: $primaryColor1;
+        color: #ffffff;
+        &:disabled {
+            color: transparentize($color: $primaryColor1, $amount: 0.65) !important;
+        }
     }
 }
