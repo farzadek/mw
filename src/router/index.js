@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import PortfolioUiView from "../views/PortfolioUi.vue";
+import PortfolioGraphicView from "../views/PortfolioGraphic.vue";
 import i18n from "@/plugins/i18n";
 const routes = [
   {
@@ -8,20 +10,14 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/portfolio/graphic",
+    path: "/graphic",
     name: "portfolioGraphic",
-    component: () =>
-      import(
-        /* webpackChunkName: "portfolio-graphic" */ "../views/portfolio/PortfolioGraphic.vue"
-      ),
+    component: PortfolioGraphicView,
   },
   {
-    path: "/portfolio/ui",
+    path: "/ui",
     name: "portfolioUi",
-    component: () =>
-      import(
-        /* webpackChunkName: "portfolio-ui" */ "../views/portfolio/PortfolioUi.vue"
-      ),
+    component: PortfolioUiView,
   },
 ];
 

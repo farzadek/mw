@@ -21,7 +21,7 @@
           >
             <swiper-slide>
               <v-card>
-                <v-btn to="/portfolio/graphic" variant="text">{{
+                <v-btn to="/graphic" variant="text">{{
                   $t("portfolio.gotoGraphicPortfolio")
                 }}</v-btn>
               </v-card>
@@ -50,7 +50,7 @@
           >
             <swiper-slide>
               <v-card>
-                <v-btn to="/portfolio/ui" variant="text">{{
+                <v-btn to="/ui" variant="text">{{
                   $t("portfolio.gotoUiPortfolio")
                 }}</v-btn>
               </v-card>

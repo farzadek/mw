@@ -3,11 +3,12 @@
     <div class="d-flex w-100 align-center justify-center px-4">
       <v-btn
         v-for="item in footerItems"
-        :key="item"
+        :key="item.id"
         class="mx-4"
         variant="plain"
         size="small"
-        >{{ $t(`appbar.${item}`) }}
+        @click="scrollToAnchorPoint(item.id)"
+        >{{ $t(`appbar.${item.name}`) }}
       </v-btn>
       <v-btn
         class="mx-4"
@@ -27,8 +28,22 @@ export default {
   name: "Footer-Component",
   data() {
     return {
-      footerItems: ["about", "services", "portfolio", "packages", "contact"],
+      footerItems: [
+        { name: "about", id: "aboutSection" },
+        { name: "services", id: "servicesSection" },
+        { name: "portfolio", id: "portfolioSection" },
+        { name: "packages", id: "packagesSection" },
+        { name: "contact", id: "contactSection" },
+      ],
     };
+  },
+  methods: {
+    async scrollToAnchorPoint(refName) {
+      if (this.$route.path !== "/") await this.$router.push({ path: "/" });
+      const el = document.getElementById(refName);
+      el.scrollIntoView({ behavior: "smooth" });
+      this.drawer = false;
+    },
   },
 };
 </script>

@@ -15,4 +15,5 @@ function uniqueArray(arr) {
 
   return outputArray;
 }
+
 export { getRandomNumbers, uniqueArray };

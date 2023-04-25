@@ -34,12 +34,12 @@
             </template>
             <v-list>
               <v-list-item>
-                <v-btn variant="plain" block href="/portfolio/graphic">{{
+                <v-btn variant="plain" block to="/graphic">{{
                   $t("appbar.portfolioGr")
                 }}</v-btn>
               </v-list-item>
               <v-list-item>
-                <v-btn variant="plain" block href="/portfolio/ui">{{
+                <v-btn variant="plain" block to="/ui">{{
                   $t("appbar.portfolioUi")
                 }}</v-btn>
               </v-list-item>
@@ -82,14 +82,12 @@
         <v-expansion-panel :title="$t('appbar.portfolio')" elevation="0">
           <v-expansion-panel-text>
             <v-btn block variant="plain">
-              <router-link to="/portfolio/graphic">{{
+              <router-link to="/graphic">{{
                 $t("appbar.portfolioGr")
               }}</router-link>
             </v-btn>
-            <v-btn block variant="plain">
-              <router-link to="/portfolio/ui">{{
-                $t("appbar.portfolioUi")
-              }}</router-link>
+            <v-btn block variant="pl}ain">
+              <router-link to="/ui">{{ $t("appbar.portfolioUi") }}</router-link>
             </v-btn>
             <v-divider></v-divider>
           </v-expansion-panel-text>
@@ -117,6 +115,8 @@
 
 <script>
 import Logo from "@/assets/images/logo.png";
+import "../plugins/tools";
+
 export default {
   name: "appbar-component",
   data() {
@@ -126,7 +126,8 @@ export default {
     };
   },
   methods: {
-    scrollToAnchorPoint(refName) {
+    async scrollToAnchorPoint(refName) {
+      if (this.$route.path !== "/") await this.$router.push({ path: "/" });
       const el = document.getElementById(refName);
       el.scrollIntoView({ behavior: "smooth" });
       this.drawer = false;

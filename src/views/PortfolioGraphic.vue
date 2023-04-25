@@ -26,7 +26,7 @@
               @click="viewFile(fileName)"
             >
               <v-lazy-image
-                :src="`http://localhost:8888/mw-vue/portfolio/graphic/${fileName.url}`"
+                :src="`${$store.getters['common/baseUrl']}/portfolio/graphic/${fileName.url}`"
               />
             </v-card>
           </div>
@@ -37,7 +37,7 @@
               @click="viewFile(fileName)"
             >
               <v-lazy-image
-                :src="`http://localhost:8888/mw-vue/portfolio/graphic/${fileName.url}`"
+                :src="`${$store.getters['common/baseUrl']}/portfolio/graphic/${fileName.url}`"
               />
             </v-card>
           </div>
@@ -48,7 +48,7 @@
               @click="viewFile(fileName)"
             >
               <v-lazy-image
-                :src="`http://localhost:8888/mw-vue/portfolio/graphic/${fileName.url}`"
+                :src="`${$store.getters['common/baseUrl']}/portfolio/graphic/${fileName.url}`"
               />
             </v-card>
           </div>
@@ -59,7 +59,7 @@
               @click="viewFile(fileName)"
             >
               <v-lazy-image
-                :src="`http://localhost:8888/mw-vue/portfolio/graphic/${fileName.url}`"
+                :src="`${$store.getters['common/baseUrl']}/portfolio/graphic/${fileName.url}`"
               />
             </v-card>
           </div>
@@ -73,7 +73,7 @@
         <img
           :width="fullViwFile.width"
           :height="fullViwFile.height"
-          :src="`http://localhost:8888/mw-vue/portfolio/graphic/${fullViwFile.url}`"
+          :src="`${$store.getters['common/baseUrl']}/portfolio/graphic/${fullViwFile.url}`"
         />
       </v-card>
     </v-dialog>
