@@ -1,4 +1,5 @@
 .v-footer {
+    flex: unset !important;
     & > div {
         flex-direction: column;
         @media (min-width: $md) {

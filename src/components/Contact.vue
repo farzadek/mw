@@ -62,7 +62,6 @@
             </div>
 
             <v-btn
-              type="submit"
               class="submit-btn"
               :disabled="!recaptchaData.isValid"
               block
@@ -107,9 +106,9 @@ export default {
         length: (len) => (v) =>
           (v || "").length >= len ||
           this.$t("contact.lengthErr", { length: len }),
-        phone: (v) =>
-          !!v.match(/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/) ||
-          this.$t("contact.phoneErr"),
+        // phone: (v) =>
+        //   !!v.match(/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/) ||
+        //   this.$t("contact.phoneErr"),
         required: (v) => !!v || "This field is required",
       },
     };
@@ -132,8 +131,9 @@ export default {
     },
     async sendEmail() {
       const headers = new Headers();
-      const result = await fetch(
-        `${this.$store.getters["common/baseUrl"]}/api/sendMail.php?name=${this.contactForm.name}&email=${this.contactForm.email}&phone=${this.contactForm.phone}&message=${this.contactForm.message}&lang=${this.$i18n.locale}`,
+      let result = false;
+      await fetch(
+        `${this.$store.getters["common/baseUrl"]}/api/sendMail.php?who='farzadek@gmail.com'&name=${this.contactForm.name}&email=${this.contactForm.email}&phone=${this.contactForm.phone}&message=${this.contactForm.message}&lang=${this.$i18n.locale}`,
         {
           method: "POST",
           headers,
@@ -143,16 +143,31 @@ export default {
           return response.json();
         })
         .then(function (data) {
+          result = data.result;
           return data;
         })
         .catch((err) => {
           console.log(err);
         });
+      this.$refs.contact.reset();
       if (result) {
         this.formResult = {
           type: "success",
           text: this.$t("contact.sendMailSuccess"),
         };
+        await fetch(
+          `${this.$store.getters["common/baseUrl"]}/api/sendMail.php?&who=${this.contactForm.email}&lang=${this.$i18n.locale}`,
+          {
+            method: "POST",
+            headers,
+          }
+        )
+          .then(function (response) {
+            return response.json();
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       } else {
         this.formResult = {
           type: "error",

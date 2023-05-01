@@ -47,9 +47,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.v-footer {
-  flex: unset !important;
-}
-</style>
