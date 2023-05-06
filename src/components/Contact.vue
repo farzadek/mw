@@ -144,6 +144,7 @@ export default {
         })
         .then(function (data) {
           result = data.result;
+          console.log(result);
           return data;
         })
         .catch((err) => {
