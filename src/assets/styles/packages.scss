@@ -1,4 +1,16 @@
 .packages-container {
+    .swiper{
+        position: relative;
+        .swiper-button-prev, .swiper-button-next {
+            position: absolute;
+            top: 0;
+            margin: 0;
+            &::after{
+                font-size: 1rem;
+                color: black;
+            }
+        }
+    }
     .swiper-slide {
         .v-card {
             border-radius: .75em;

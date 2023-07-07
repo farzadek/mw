@@ -39,10 +39,10 @@
     "graphicDescription": "Graphic design description"
   },
   "portfolio": {
-    "subTitle": "See some projects and designs",
+    "subTitle": "Voir nos projets et conceptions",
     "title": "Portfolio",
-    "gotoGraphicPortfolio": "Visit our Graphic design Porfolio page",
-    "gotoUiPortfolio": "Visit our Web design Porfolio page",
+    "gotoGraphicPortfolio": "Plus...",
+    "gotoUiPortfolio": "Plus...",
     "graphicSectionTitle": "Graphic design",
     "uiSectionTitle": "Web design (UI)",
     "uiSections": {

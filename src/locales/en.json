@@ -42,8 +42,8 @@
   "portfolio": {
     "subTitle": "See some projects and designs",
     "title": "Portfolio",
-    "gotoGraphicPortfolio": "Visit our Graphic design Porfolio page",
-    "gotoUiPortfolio": "Visit our Web design Porfolio page",
+    "gotoGraphicPortfolio": "More Graphic designs...",
+    "gotoUiPortfolio": "More Web design...",
     "graphicSectionTitle": "Graphic design",
     "uiSectionTitle": "Web design (UI)",
     "uiSections": {
