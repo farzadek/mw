@@ -65,7 +65,7 @@ export default {
         {
           class: 1,
           name: this.$t("packages.simple"),
-          price: this.$t("packages.price", { price: 850 }),
+          price: this.$t("packages.price", { price: 1150 }),
           includes: [
             this.$t("packages.includes.pageCount", { pages: 1 }),
             this.$t("packages.includes.contactForm"),
@@ -80,7 +80,7 @@ export default {
         {
           class: 2,
           name: this.$t("packages.small"),
-          price: this.$t("packages.price", { price: 1150 }),
+          price: this.$t("packages.price", { price: 1550 }),
           includes: [
             this.$t("packages.includes.pageCount", { pages: 3 }),
             this.$t("packages.includes.contactForm"),
@@ -97,7 +97,7 @@ export default {
         {
           class: 3,
           name: this.$t("packages.medium"),
-          price: this.$t("packages.price", { price: 1950 }),
+          price: this.$t("packages.price", { price: 2050 }),
           includes: [
             this.$t("packages.includes.pageCount", { pages: 5 }),
             this.$t("packages.includes.contactForm"),
