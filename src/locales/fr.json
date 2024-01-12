@@ -98,5 +98,19 @@
     "phoneErr": "Le numéro de téléphone est incorrect",
     "sendMailErr": "E-mail non envoyé, essayez plus tard !",
     "sendMailSuccess": "E-mail envoyé avec succès!"
+  },
+  "pageNotFound": {
+    "title": "Wrong way?",
+    "backToHome": "Reto",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "captcha": "Type what you see here",
+    "required": "This field is required",
+    "emailFormatErr": "Please enter a valid email",
+    "lengthErr": "Invalid character length, required min. {length} characters",
+    "phoneErr": "Phone number is not correct",
+    "sendMailErr": "Email not send, try later!",
+    "sendMailSuccess": "Email sent successfully!"
   }
 }
