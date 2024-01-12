@@ -99,5 +99,11 @@
     "phoneErr": "Phone number is not correct",
     "sendMailErr": "Email not send, try later!",
     "sendMailSuccess": "Email sent successfully!"
+  },
+  "pageNotFound": {
+    "title": "Was it a typo or wrong url?",
+    "backToHome": "home",
+    "graphic": "Graphic Design portfolio",
+    "ui": "UI design portfolio"
   }
 }

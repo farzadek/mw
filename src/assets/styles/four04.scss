@@ -1,0 +1,20 @@
+.not-found{
+    position: relative;
+    height: calc(100dvh - 220px);
+    @media (min-width: $md) {
+        height: calc(100dvh - 90px);
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    div{
+        color: #fff;
+        position:absolute;
+        top: 15%;
+        .text-h2{
+            text-shadow: 0 0 2px black;
+        }
+    }
+}

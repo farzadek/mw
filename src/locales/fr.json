@@ -98,5 +98,11 @@
     "phoneErr": "Le numéro de téléphone est incorrect",
     "sendMailErr": "E-mail non envoyé, essayez plus tard !",
     "sendMailSuccess": "E-mail envoyé avec succès!"
+  },
+  "pageNotFound": {
+    "title": "Était-ce une faute de frappe ou une mauvaise URL ?",
+    "backToHome": "Accueil",
+    "graphic": "Conceptions graphiques",
+    "ui": "Design web (UI)"
   }
 }
