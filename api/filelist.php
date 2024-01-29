@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: https://montrealweb.ca");
 $category = $_GET['cat'];
 function getDirContents($dir, $filter = '', &$results = array())
 {

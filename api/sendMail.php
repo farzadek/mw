@@ -1,29 +1,56 @@
 <?php
-header('Access-Control-Allow-Origin: *');
 
-$who = isset($_GET['who']) && !empty($_GET['who']) ? filter_var(htmlentities(trim($_GET['who'])), FILTER_FLAG_STRIP_HIGH) : '';
-$name = isset($_GET['name']) && !empty($_GET['name']) ? filter_var(htmlentities(trim($_GET['name'])), FILTER_FLAG_STRIP_HIGH) : '';
-$phone = isset($_GET['phone']) && !empty($_GET['phone']) ? filter_var(htmlentities(trim($_GET['phone'])), FILTER_FLAG_STRIP_HIGH) : '';
-$email = isset($_GET['email']) && !empty($_GET['email']) ? filter_var(htmlentities(trim($_GET['email'])), FILTER_SANITIZE_EMAIL) : '';
-$message = isset($_GET['message']) && !empty($_GET['message']) ? filter_var(htmlentities(trim($_GET['message'])), FILTER_FLAG_STRIP_HIGH) : '';
-$lang = isset($_GET['lang']) && !empty($_GET['lang']) ? filter_var(htmlentities(trim($_GET['lang'])), FILTER_FLAG_STRIP_HIGH) : 'en';
+header('Access-Control-Allow-Origin: https://montrealweb.ca');
+header('Content-Type: application/json');
 
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$adminEmail = 'farzadek@gmail.com';
+$fields = ['who','name','phone','email','message'];
+$form = [];
 
-$result = false;
-if ($message == '') {
-    $subject = 'Message received from montrealweb-contact';
-    $reply = '<p>Name: ' . $name . '</p><p>Phone: ' . $phone . '</p><p>Email: ' . $email . '</p><p>Message: ' . $message . '</p><p>Lang: ' . $lang . '</p>';
-    $headers .= 'From: montrealweb - contact' . "\r\n";
-    $result = mail('farzadek@gmail.com', $subject, $reply, $headers);
-} else {
-    if (!empty($email)) {
-        $subject = $lang == 'en' ? 'Your message received' : 'On a recu votre message';
-        $reply = $lang == 'en' ? '<p>We received your message, we will contact you as soon as possible.</p>MontrealWeb.ca<br/>(438) 300-0456' : '<p>Nous avons recu votre message, nous serons contactés dès que possible.</p>MontrealWeb.ca<br/>(438) 300-0456';
-        $headers .= 'From: MontrealWeb.ca' . "\r\n";
-        $result = mail($email, $subject, $reply, $headers);
-    }
+foreach ($fields as $field) {
+    $filter = 'email' === $field ? FILTER_SANITIZE_EMAIL : FILTER_SANITIZE_ENCODED;
+    $form[$field] = filter_var(htmlentities(trim($_GET[$field] ?? '')), $filter);
 }
 
-echo json_encode(array('result' => $result));
+$isEnglish = $_GET['lang'] === 'en';
+$form['lang'] = $isEnglish ? 'english' : 'french';
+
+$adminContent = [
+    'email' => $adminEmail,
+    'subject' => 'Message received from montrealweb-contact',
+    'body' => sprintf('<p>Name: %s</p><p>Phone: %s</p><p>Email: %s</p><p>Message: %s</p><p>Lang: %s</p>', $form['name'], $form['phone'], $form['email'], $form['message'], $form['lang']),
+];
+
+$clientContent = [
+    'email' => $form['email'],
+    'subject' => $isEnglish ? 'Your message received' : 'On a reçu votre message',
+    'body' => $isEnglish ? '<p>We received your message, we will contact you as soon as possible.</p>MontrealWeb.ca<br/>(438) 300-0456' : '<p>Nous avons reçu votre message, nous vous contacterons dès que possible.</p>MontrealWeb.ca<br/>(438) 300-0456',
+];
+
+$headers = [
+    'MIME-Version' => '1.0',
+    'Content-type' => 'text/html; charset=utf8',
+    'From' => $adminEmail,
+    'Reply-To' => $adminEmail,
+    'X-Mailer' => 'PHP/' . phpversion()
+];
+
+$results = [
+    'admin' => false,
+    'client' => false,
+    'error' => null,
+];
+
+try {
+    $results['admin'] = sendEmail($adminContent, $headers);
+    $results['client'] = sendEmail($clientContent, $headers);
+} catch (Throwable $e) {
+    $results['error'] = $e;
+}
+
+echo json_encode($results);
+die;
+
+function sendEmail($content, $headers) {
+    return mail($content['email'], $content['subject'], $content['body'], $headers);
+}
