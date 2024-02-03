@@ -97,7 +97,8 @@
     "lengthErr": "Longueur de caractères non valide, min. requis. {longueur} caractères",
     "phoneErr": "Le numéro de téléphone est incorrect",
     "sendMailErr": "E-mail non envoyé, essayez plus tard !",
-    "sendMailSuccess": "E-mail envoyé avec succès!"
+    "sendMailSuccess": "E-mail envoyé avec succès!",
+    "send": "Envoyer"
   },
   "pageNotFound": {
     "title": "Était-ce une faute de frappe ou une mauvaise URL ?",
