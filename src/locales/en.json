@@ -99,7 +99,11 @@
     "phoneErr": "Phone number is not correct",
     "sendMailErr": "Email not send, try later!",
     "sendMailSuccess": "Email sent successfully!",
-    "send": "Send"
+    "send": "Send",
+    "tabs":{
+      "tab1": "Contact form",
+      "tab2": "Voice message"
+    }
   },
   "pageNotFound": {
     "title": "Was it a typo or wrong url?",

@@ -98,7 +98,11 @@
     "phoneErr": "Le numéro de téléphone est incorrect",
     "sendMailErr": "E-mail non envoyé, essayez plus tard !",
     "sendMailSuccess": "E-mail envoyé avec succès!",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "tabs":{
+      "tab1": "Formulaire de contact",
+      "tab2": "Message vocal"
+    }
   },
   "pageNotFound": {
     "title": "Était-ce une faute de frappe ou une mauvaise URL ?",

@@ -11,10 +11,12 @@
         <v-col cols="12" sm="10" md="8" lg="6">
           <v-card>
             <v-tabs v-model="formTab" slider-color="#5a0060">
-              <v-tab append-icon="mdi-form-select" value="one">Fill form</v-tab>
-              <v-tab append-icon="mdi-microphone" value="two"
-                >Send voice message</v-tab
-              >
+              <v-tab append-icon="mdi-form-select" value="one">{{
+                $t("contact.tabs.tab1")
+              }}</v-tab>
+              <v-tab append-icon="mdi-microphone" value="two">{{
+                $t("contact.tabs.tab2")
+              }}</v-tab>
             </v-tabs>
 
             <v-card-text>
@@ -76,42 +78,62 @@
                       class="submit-btn"
                       :disabled="!recaptchaData.isValid"
                       block
-                      @click="submitContact"
+                      @click="submitContactVoice"
                       >submit</v-btn
                     >
                   </v-form>
                 </v-window-item>
 
                 <v-window-item class="recording-audio" value="two">
-                  <v-row justify="center" class="text-center">
-                    <v-col cols="12">
-                      <v-btn
-                        @click="recordBtnClicked"
-                        :icon="isRecording ? 'mdi-stop' : 'mdi-record'"
-                        size="x-large"
-                        class="record-button my-4"
-                      />
-                    </v-col>
-                    <v-col cols="12">
-                      <audio
-                        v-show="savedAudio"
-                        class="mb-2"
-                        id="audioElement"
-                        :src="savedAudio"
-                        controls
-                      />
-                      <p>{{ audioCountDown.content }}</p>
-                    </v-col>
-                    <v-col cols="12">
-                      <v-btn
-                        class="submit-btn"
-                        :disabled="!savedAudio"
-                        block
-                        @click="uploadAudio"
-                        :text="$t('contact.send')"
-                      />
-                    </v-col>
-                  </v-row>
+                  <v-form ref="contactVoice" class="contact-form">
+                    <v-row justify="center" class="text-center">
+                      <v-col cols="12">
+                        <v-alert
+                          v-show="formResult.text"
+                          :type="formResult.type"
+                          :text="formResult.text"
+                          density="compact"
+                          class="mb-8"
+                        ></v-alert>
+                        <v-btn
+                          @click="recordBtnClicked"
+                          :icon="isRecording ? 'mdi-stop' : 'mdi-record'"
+                          size="x-large"
+                          class="record-button my-4"
+                        />
+                      </v-col>
+                      <v-col cols="12">
+                        <audio
+                          v-show="savedAudio"
+                          class="mb-2"
+                          id="audioElement"
+                          :src="savedAudio"
+                          controls
+                        />
+                        <p>{{ audioCountDown.content }}</p>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-textarea
+                          v-model="contactForm.message"
+                          :rules="[rules.required, rules.length(5)]"
+                          auto-grow
+                          variant="outlined"
+                          :label="$t('contact.message')"
+                          rows="3"
+                          class="mb-4"
+                        ></v-textarea>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-btn
+                          class="submit-btn"
+                          :disabled="!savedAudio"
+                          block
+                          @click="uploadAudio"
+                          :text="$t('contact.send')"
+                        />
+                      </v-col>
+                    </v-row>
+                  </v-form>
                 </v-window-item>
               </v-window>
             </v-card-text>
@@ -139,6 +161,9 @@ export default {
         name: null,
         email: null,
         phone: null,
+        message: null,
+      },
+      contactVoice: {
         message: null,
       },
       recaptchaValue: ref(null),
@@ -242,6 +267,12 @@ export default {
       this.isRecording = false;
     },
     async submitContact() {
+      const isValid = await this.$refs.contact.validate();
+      if (isValid.valid) {
+        this.sendEmail();
+      }
+    },
+    async submitContactVoice() {
       const isValid = await this.$refs.contact.validate();
       if (isValid.valid) {
         this.sendEmail();
