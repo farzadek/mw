@@ -7,6 +7,43 @@ $adminEmail = 'farzadek@gmail.com';
 $fields = ['message'];
 $form = [];
 
+
+/* upload file */
+$target_dir = "voices/";
+$target_file = $target_dir . basename($_FILES["fileToUpload2"]["name"]);
+$uploadOk = 1;
+$audioFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
+// Check file size in bytes
+if ($_FILES["fileToUpload2"]["size"] > 5000000000) {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+}
+// Allow certain file formats only .wav, .mp3, .wma, and .mp4 files can be uploaded
+if($audioFileType != "wav" && $audioFileType != "mp3" && $audioFileType != "wma"
+&& $audioFileType != "mp4" ) {
+    echo "Sorry, only wav, mp3, wma & mp4 files are allowed.";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload2"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["fileToUpload2"]["name"]). " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
+/* ****************** */
+
+
 foreach ($fields as $field) {
     $filter = 'email' === $field ? FILTER_SANITIZE_EMAIL : FILTER_SANITIZE_ENCODED;
     $form[$field] = filter_var(htmlentities(trim($_GET[$field] ?? '')), $filter);
