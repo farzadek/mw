@@ -20,7 +20,8 @@ const getters = {
 
 // actions
 const actions = {
-  async loadPortfolio({ state, commit, rootGetters }, category) {
+  async loadPortfolio() {
+    /*
     if (state.portfolios[category].length === 0) {
       let headers = new Headers();
       const content = await fetch(
@@ -43,7 +44,7 @@ const actions = {
       if (category === "ui") {
         commit("setUiSections", { content });
       }
-    }
+    }*/
   },
 };
 

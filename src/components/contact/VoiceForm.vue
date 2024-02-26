@@ -1,5 +1,12 @@
 <template>
   <v-form ref="contactVoice" class="contact-form">
+    <v-overlay
+      v-model="setOverlay"
+      absolute
+      opacity="0"
+      full-height
+      persistent
+    ></v-overlay>
     <v-row justify="center" class="text-center">
       <v-col cols="12">
         <v-alert
@@ -11,7 +18,8 @@
         ></v-alert>
         <v-btn
           @click="recordBtnClicked"
-          :icon="isRecording ? 'mdi-stop' : 'mdi-record'"
+          :icon="isRecording ? 'mdi-stop' : 'mdi-microphone'"
+          :color="isRecording ? 'red-darken-1' : ''"
           size="x-large"
           class="record-button my-4"
         />
@@ -25,7 +33,7 @@
           controls
         />
         <input type="file" name="file" id="file" class="d-none" />
-        <p>{{ audioCountDown.content }}</p>
+        <p v-if="isRecording">{{ audioCountDown.content }}</p>
       </v-col>
       <v-col cols="12">
         <v-btn
@@ -53,6 +61,7 @@ export default {
       savedAudio: null,
       audioCountDown: { timer: 0, content: null },
       formResult: { text: null, type: "error" },
+      setOverlay: true,
     };
   },
   computed: {
@@ -71,6 +80,7 @@ export default {
     },
     startRecording() {
       this.startusingBrowserMicrophone(true);
+      this.setOverlay = true;
       this.setCountDown();
     },
     async getUserMedia(constraints) {
@@ -108,6 +118,7 @@ export default {
     setCountDown() {
       setTimeout(() => {
         clearInterval(audioInterval);
+        /* auto stop after 60sec. */
         this.stopRecording();
       }, 60000);
       this.audioCountDown.timer = 60;
@@ -128,9 +139,10 @@ export default {
       this.rec.stop();
       this.audioCountDown.content = null;
       this.isRecording = false;
+      this.setOverlay = false;
     },
     submitContactVoice() {
-      /*  needs to validate file-recorded    const isValid = await this.$refs.contact.validate(); */
+      /*  needs to validate file-recorded */
       this.uploadFile();
     },
     uploadFile() {},
