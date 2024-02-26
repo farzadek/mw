@@ -1,11 +1,40 @@
-.contact-form {
-    .vue_client_recaptcha {
-        height: 56px;
-        margin-left: 0.5em;
+.contact-container {
+    .v-card {
+        audio {
+            width: 100% !important;
+        }
+    }
+    .v-tabs {
+        border-bottom: 1px solid transparentize($primaryColor1, 0.25);
+        .v-btn {
+            width: 50%;
+            &.v-tab--selected {
+                background-color: transparentize($primaryColor1, 0.25) !important;
+                color: white;
+            }
+        }
+    }
+    .recording-audio {
+        .record-button {
+            .v-icon {
+                font-size: 3rem;
+                &.mdi-record {
+                    color: red;
+                }
+            }
+        }
+    }
+    .contact-form {
+        .vue_client_recaptcha {
+            height: 56px;
+            margin-left: 0.5em;
+        }
     }
     .submit-btn {
-        background-color: $primaryColor1;
-        color: #ffffff;
+        &:not(.v-btn--disabled) {
+            background-color: $primaryColor1;
+            color: #ffffff;
+        }
         &.v-btn--disabled {
             color: transparentize($color: $primaryColor1, $amount: 0.65) !important;
         }

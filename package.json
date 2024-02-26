@@ -18,7 +18,7 @@
     "vue-client-recaptcha": "^1.1.1",
     "vue-i18n": "^9.1.0",
     "vue-router": "^4.0.3",
-    "vuetify": "^3.1.5",
+    "vuetify": "^3.5.2",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
