@@ -5,6 +5,7 @@
     "portfolio": "Portfolio",
     "portfolioGr": "Graphic design",
     "portfolioUi": "Design web (UI)",
+    "portfolioUx": "UX design",
     "packages": "Packages",
     "blog": "Blog",
     "contact": "Contact",
@@ -58,7 +59,29 @@
       "office": "Small businesses",
       "kindergarten": "Kindergarten",
       "beauty": "Beauty salon"
-    }
+    },
+    "uxSectionTitle": "User Experience design (UX)",
+    "uxSections": {
+      "project1":{
+        "projectName": "Coach.moi",
+        "summary": "Summary",
+        "mission": "Mission",
+        "missionText": "This project involved designing a coaching website to help users with different aspects of daily life—personal finance, fashion, cooking, DIY, and more. The goal was to create an intuitive, accessible, and welcoming platform where users could easily find practical advice. As the UX designer. The result is a simple, engaging site that guides users toward helpful resources tailored to their everyday needs.",
+        "myContributions": "My Contributions",
+        "myContributionsText": "I was responsible for the entire UX process from start to finish. This included user research, theming, font and color selection, wireframing, prototyping, and UI design. I focused on organizing the content in a clear and accessible way, designing smooth navigation flows, and ensuring the overall experience was supportive and user-centered. I also collaborated closely with the integration and frontend teams to ensure the design vision was implemented accurately and efficiently across the final product.",
+        "process": "The process",
+        "step1title": "Structure",
+        "step1Text": "The first step was the structure. The structure shows the map that we need to follow. We draw it after multiple interviews with stakeholders and also marketing experts.",
+        "step2title": "Research",
+        "step2Text": "The research for this project was based on competitive and comparative analysis. I studied several high-traffic websites such as Le Figaro, The Times, and popular lifestyle blogs to understand how they structure content, guide users, and present information visually. By analyzing their strengths and identifying common design patterns, I gained valuable insights that I adapted and customized for our website. Some features were directly inspired by these sources, while others were reimagined to better suit our goals and target audience.",
+        "step3title": "wireframes",
+        "step3Text": "",
+        "step4title": "Graphic Design",
+        "step4Text": "The graphic design work for this project included creating the logo, custom icons, and illustrations, as well as selecting the theme's color palette and typography. I was also responsible for sourcing and editing photography, performing image corrections, and ensuring that all visual elements were consistent with the overall brand identity. Every graphic component was designed to enhance the user experience and support the site’s tone, making the interface both visually appealing and coherent.",
+        "step5title": "UI Design",
+        "step5Text": ""
+      }
+   }
   },
   "packages": {
     "subTitle": "See some projects and designs",

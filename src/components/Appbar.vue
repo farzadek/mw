@@ -43,6 +43,11 @@
                   $t("appbar.portfolioUi")
                 }}</v-btn>
               </v-list-item>
+              <v-list-item>
+                <v-btn variant="plain" block to="/ux">{{
+                  $t("appbar.portfolioUx")
+                }}</v-btn>
+              </v-list-item>
             </v-list>
           </v-menu>
           <v-btn @click="scrollToAnchorPoint('packagesSection')">{{

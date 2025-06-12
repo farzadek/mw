@@ -5,6 +5,7 @@
     "portfolio": "Portfolio",
     "portfolioGr": "UI",
     "portfolioUi": "Infographie",
+    "portfolioUx": "Design UX",
     "packages": "Packages",
     "blog": "Blog",
     "contact": "Contact",
@@ -57,7 +58,29 @@
       "office": "Petites entreprises",
       "kindergarten": "Garderie",
       "beauty": "Salon de beauté"
-    }
+    },
+    "uxSectionTitle": "Conception de l'expérience utilisateur (UX)",
+    "uxSections": {
+      "project1":{
+        "projectName": "Coach.moi",
+        "summary": "Résumé",
+        "mission": "Mission",
+        "missionText": "Ce projet visait à concevoir un site web de coaching destiné à aider les utilisateurs dans divers aspects de leur vie quotidienne, comme les finances, la mode, la cuisine, les travaux manuels, etc. Mon objectif était de créer une interface intuitive, accessible et accueillante, où l’utilisateur peut facilement trouver des conseils utiles. En tant que designer UX, j’ai structuré le contenu de manière claire, assuré une navigation fluide, et développé une expérience positive centrée sur les besoins concrets et variés des utilisateurs.",
+        "myContributions": "Mes contributions",
+        "myContributionsText": "J’ai pris en charge l’ensemble du processus UX du début à la fin. Cela comprenait la recherche utilisateur, la définition des thèmes, le choix des polices et des couleurs, la création des wireframes, des prototypes et du design UI. Je me suis concentré sur une organisation claire du contenu, une navigation fluide et une expérience globale centrée sur l’utilisateur. J’ai également collaboré étroitement avec les équipes d’intégration et de développement frontend pour garantir une mise en œuvre fidèle du design final.",
+        "process": "le processus",
+        "step1title": "Structure",
+        "step1Text": "La première étape a été la structuration. Cette structure définit la feuille de route à suivre. Nous l'avons élaborée après de nombreux entretiens avec les parties prenantes et les experts marketing.",
+        "step2title": "Recherche",
+        "step2Text": "La recherche dans ce projet s’est appuyée sur une analyse concurrentielle et comparative. J’ai étudié plusieurs sites à fort trafic, comme Le Figaro, The Times et des blogs populaires, afin de comprendre comment ils organisent leur contenu, orientent les utilisateurs et présentent visuellement l’information. Cette analyse m’a permis de dégager des bonnes pratiques que j’ai adaptées ou personnalisées pour notre site. Certaines fonctionnalités ont été inspirées directement de ces sites, tandis que d’autres ont été repensées pour mieux répondre à nos objectifs et à notre public cible.",
+        "step3title": "Wireframes",
+        "step3Text": "",
+        "step4title": "Infographie",
+        "step4Text": "Le travail de design graphique comprenait la création du logo, des icônes personnalisées, des illustrations, ainsi que la sélection de la palette de couleurs et des typographies du thème. J’étais également responsable de la recherche et de la retouche des photographies, des corrections d’images et de la cohérence visuelle de l’ensemble des éléments graphiques avec l’identité de marque. Chaque élément a été pensé pour renforcer l’expérience utilisateur et donner au site une interface attrayante et harmonieuse.",
+        "step5title": "Conception de l'interface utilisateur",
+        "step5Text": ""
+      }
+   }
   },
   "packages": {
     "subTitle": "Voir quelques projets et conceptions",

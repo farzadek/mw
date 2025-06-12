@@ -16,6 +16,7 @@ $primaryColor1: #5a0060;
     padding-bottom: 3em;
     padding-top: 3em;
     overflow-x: hidden;
+    min-height: calc(100dvh - 100px);
     &:nth-child(2n + 1) {
         background-color: transparentize($color: $primaryColor1, $amount: 0.95);
     }
@@ -48,4 +49,10 @@ $primaryColor1: #5a0060;
 .secondary-btn {
     color: $primaryColor1;
     background-color: #ffffff;
+}
+.primary-color{
+    color: $primaryColor1;
+}
+.white-space-preline{
+    white-space: pre-line;
 }
