@@ -14,9 +14,11 @@
               <v-tab append-icon="mdi-form-select" value="one">{{
                 $t("contact.tabs.tab1")
               }}</v-tab>
+              <!--
               <v-tab append-icon="mdi-microphone" value="two">{{
                 $t("contact.tabs.tab2")
               }}</v-tab>
+            -->
             </v-tabs>
 
             <v-card-text>
