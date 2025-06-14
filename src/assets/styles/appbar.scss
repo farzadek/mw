@@ -3,9 +3,11 @@ header {
   .v-row {
     align-items: center;
   }
-  .logo-title-box {
+  .logo-title-box a{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    gap:.25rem;
     img {
       height: 45px;
       margin-left: 0.8em;

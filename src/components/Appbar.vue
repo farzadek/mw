@@ -3,12 +3,19 @@
     <v-container>
       <v-row>
         <div class="logo-title-box">
-          <img
-            class="logo-image d-md-none ml-3"
-            :src="logo"
-            alt="montreal web logo"
-          />
-          <span class="logo-title d-none d-md-block">MontrealWEB</span>
+          <router-link to="/" class="logo-link">
+            <img
+              class="logo-image d-none d-md-block"
+              :src="logo"
+              alt="montreal web logo"
+            />
+            <img
+              class="logo-image d-md-none ml-3"
+              :src="logo"
+              alt="montreal web logo"
+            />
+            <span class="logo-title d-none d-md-block">MontrealWEB</span>
+          </router-link>
         </div>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon
