@@ -80,6 +80,25 @@
         "step4Text": "The graphic design work for this project included creating the logo, custom icons, and illustrations, as well as selecting the theme's color palette and typography. I was also responsible for sourcing and editing photography, performing image corrections, and ensuring that all visual elements were consistent with the overall brand identity. Every graphic component was designed to enhance the user experience and support the site’s tone, making the interface both visually appealing and coherent.",
         "step5title": "UI Design",
         "step5Text": ""
+      },
+      "project2":{
+        "projectName": "AlloFriends",
+        "summary": "Summary",
+        "mission": "Mission",
+        "missionText": "The Allofriends project involved improving an existing website that was already in production but lacked any form of analytics, tracking events, or user data. The main challenge was identifying user pain points without quantitative data to guide decisions. To overcome this, I relied on heuristic evaluation, competitor analysis, and manual testing of user flows to detect friction points and usability issues. I also conducted informal interviews and gathered qualitative feedback to better understand user needs and behaviors. This approach helped define targeted improvements despite the absence of tracked data.",
+        "myContributions": "My Contributions",
+        "myContributionsText": "On this project, I played multiple roles: UX researcher, UX analyst, UI designer, and frontend developer. I began by identifying user pain points through heuristic evaluations and manual testing, given the absence of analytics or tracking data. I proposed practical solutions to improve usability and engagement, redesigned the user interface for better clarity and consistency, and introduced visual improvements to make the experience more inviting. Additionally, I worked on strategies to retain visitors longer on the site. Once the design was finalized, I actively contributed to frontend development to implement the new interface.",
+        "process": "The process",
+        "step1title": "Research and analysis",
+        "step1Text": "The first step was the structure. The structure shows the map that we need to follow. We draw it after multiple interviews with stakeholders and also marketing experts.",
+        "step2title": "Meetings and decision making",
+        "step2Text": "After developing user personas and identifying key pain points, I created detailed reports summarizing my findings. I shared these insights with stakeholders and technical teams to ensure a collaborative and informed decision-making process. These discussions helped align our goals and allowed us to prioritize solutions that were both technically feasible and valuable to users. This step was crucial in making meaningful, data-informed improvements despite the lack of analytics.",
+        "step3title": "wireframes",
+        "step3Text": "",
+        "step4title": "UI Design",
+        "step4Text": "The graphic design work for this project included creating the logo, custom icons, and illustrations, as well as selecting the theme's color palette and typography. I was also responsible for sourcing and editing photography, performing image corrections, and ensuring that all visual elements were consistent with the overall brand identity. Every graphic component was designed to enhance the user experience and support the site’s tone, making the interface both visually appealing and coherent.",
+        "step5title": "UI Design",
+        "step5Text": ""
       }
    }
   },
