@@ -32,9 +32,7 @@
           }}</v-btn>
           <v-menu>
             <template v-slot:activator="{ props }">
-              <v-btn
-                v-bind="props"
-                @click="scrollToAnchorPoint('portfolioSection')"
+              <v-btn v-bind="props"
                 >{{ $t("appbar.portfolio")
                 }}<v-icon>mdi mdi-menu-down</v-icon></v-btn
               >
@@ -98,8 +96,11 @@
                 $t("appbar.portfolioGr")
               }}</router-link>
             </v-btn>
-            <v-btn block variant="pl}ain">
+            <v-btn block variant="plain">
               <router-link to="/ui">{{ $t("appbar.portfolioUi") }}</router-link>
+            </v-btn>
+            <v-btn block variant="plain">
+              <router-link to="/ux">{{ $t("appbar.portfolioUx") }}</router-link>
             </v-btn>
             <v-divider></v-divider>
           </v-expansion-panel-text>

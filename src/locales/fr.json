@@ -149,5 +149,8 @@
     "backToHome": "Accueil",
     "graphic": "Conceptions graphiques",
     "ui": "Design web (UI)"
+  },
+  "errors": {
+    "load": "Erreur temporaire, impossible de charger les informations"
   }
 }

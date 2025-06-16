@@ -1,5 +1,9 @@
 .uiFolio-container {
     position: relative;
+    min-height: calc(100dvh - 275px);
+    @media (min-width: $sm) {
+        min-height: calc(100dvh - 160px);
+    }
     .v-progress-circular {
         position: absolute;
         top: 50%;

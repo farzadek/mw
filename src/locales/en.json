@@ -150,5 +150,8 @@
     "backToHome": "home",
     "graphic": "Graphic Design portfolio",
     "ui": "UI design portfolio"
+  },
+  "errors": {
+    "load": "Temporary error, Couldn't load information"
   }
 }
