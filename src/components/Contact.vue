@@ -26,10 +26,11 @@
                 <v-window-item value="one">
                   <ContactForm />
                 </v-window-item>
-
+                <!--
                 <v-window-item class="recording-audio" value="two">
                   <VoiceForm />
                 </v-window-item>
+              -->
               </v-window>
             </v-card-text>
           </v-card>
@@ -41,12 +42,12 @@
 
 <script>
 import ContactForm from "./contact/ContactForm.vue";
-import VoiceForm from "./contact/VoiceForm.vue";
+//import VoiceForm from "./contact/VoiceForm.vue";
 export default {
   name: "Contact-component",
   components: {
     ContactForm,
-    VoiceForm,
+    //VoiceForm,
   },
   data() {
     return {

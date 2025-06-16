@@ -138,14 +138,13 @@ export default {
         })
         .then(function (data) {
           result = data.result;
-          console.log(result);
           return data;
         })
         .catch((err) => {
           console.log(err);
         });
       this.$refs.contact.reset();
-      if (result) {
+      if (result === undefined) {
         this.formResult = {
           type: "success",
           text: this.$t("contact.sendMailSuccess"),
