@@ -1,0 +1,9 @@
+.uxFolio-container {
+    .projects{
+        .v-btn{
+            &.selected{
+                border:6px double $primaryColor1;
+            }
+        }
+    }
+}

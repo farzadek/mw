@@ -71,7 +71,7 @@
         <v-col cols="12" md="4">
           <iframe
             class="w-100"
-            :src="portfolioFiles.vid1"
+            :src="portfolioFiles.vid2"
             title="YouTube video player"
             frameborder="0"
             allowfullscreen
@@ -146,12 +146,11 @@ export default {
     return {
       showProgress: false,
       portfolioFiles: {
-        vid1: "https://www.youtube.com/embed/-A7VBQCvnwo?si=VZU8xjwgRlGXt_pR",
-        vid2: "https://www.youtube.com/embed/-A7VBQCvnwo?si=VZU8xjwgRlGXt_pR",
+        vid1: "https://www.youtube.com/embed/RDRiEIW8_rU?si=IgdmhNkTVUM-EmpI",
+        vid2: "https://www.youtube.com/embed/T6Kxk-4E9FM?si=dZ92jxlGJ133lEKE",
         img3: `${this.$store.getters["common/baseUrl"]}/portfolio/ux/2/img1.jpg`,
-        vid3: "https://www.youtube.com/embed/-A7VBQCvnwo?si=VZU8xjwgRlGXt_pR",
+        vid3: "https://www.youtube.com/embed/YL4N6_UJpYI?si=-wwGtU-QagscuIEv",
         img4: `${this.$store.getters["common/baseUrl"]}/portfolio/ux/2/img2.jpg`,
-        vid4: "https://www.youtube.com/embed/-A7VBQCvnwo?si=VZU8xjwgRlGXt_pR",
       },
     };
   },

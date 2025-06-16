@@ -10,12 +10,14 @@
         </v-col>
       </v-row>
       <v-row class="py-3 py-lg-5">
-        <v-col cols="12" sm="4" md="3">
+        <v-col cols="12" sm="4" md="3" class="projects">
           <v-btn
             elevation="3"
             rounded="md"
-            class="w-100 pa-3 h-auto mb-4"
-            :disabled="selectedUxProject === 1"
+            :class="[
+              'w-100 pa-3 h-auto mb-4',
+              { selected: selectedUxProject === 1 },
+            ]"
             @click="selectedUxProject = 1"
           >
             <div class="d-flex flex-column align-center">
@@ -26,8 +28,10 @@
           <v-btn
             elevation="3"
             rounded="md"
-            class="w-100 pa-3 h-auto"
-            :disabled="selectedUxProject === 2"
+            :class="[
+              'w-100 pa-3 h-auto',
+              { selected: selectedUxProject === 2 },
+            ]"
             @click="selectedUxProject = 2"
           >
             <div class="d-flex flex-column align-center">

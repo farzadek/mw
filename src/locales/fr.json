@@ -81,7 +81,7 @@
         "step5Text": ""
       },
       "project2":{
-        "projectName": "Allofriends",
+        "projectName": "Allofriends.net",
         "summary": "Résumé",
         "mission": "Mission",
         "missionText": "Le projet Allofriends consistait à améliorer un site web déjà en production, mais qui ne disposait d’aucune donnée analytique, ni d’événements suivis. Le principal défi était de détecter les points de friction sans données quantitatives. Pour y parvenir, j’ai effectué une évaluation heuristique, une analyse de la concurrence et des tests manuels des parcours utilisateurs afin d’identifier les problèmes d’utilisabilité. J’ai également mené des entrevues informelles et recueilli des retours qualitatifs pour mieux comprendre les besoins et les comportements des utilisateurs. Cette approche m’a permis de proposer des améliorations ciblées malgré l’absence de données chiffrées.",
@@ -89,13 +89,13 @@
         "myContributionsText": "Dans ce projet, j’ai occupé plusieurs rôles : chercheur UX, analyste UX, designer UI et développeur frontend. En l’absence de données analytiques, j’ai identifié les points de friction grâce à une évaluation heuristique et des tests manuels. J’ai proposé des solutions concrètes pour améliorer l’utilisabilité, repensé l’interface utilisateur pour plus de clarté et de cohérence, et introduit des améliorations visuelles pour rendre l’expérience plus engageante. J’ai également réfléchi à des stratégies pour augmenter la rétention des visiteurs. Une fois le design finalisé, j’ai participé activement à l’intégration frontend.",
         "process": "le processus",
         "step1title": "Recherche et analyse",
-        "step1Text": "La première étape a été la structuration. Cette structure définit la feuille de route à suivre. Nous l'avons élaborée après de nombreux entretiens avec les parties prenantes et les experts marketing.",
+        "step1Text": "Pour repérer les points faibles et les axes d’amélioration, j’ai d’abord analysé le fonctionnement d’autres sites de rencontres populaires. J’ai comparé leurs parcours utilisateurs, leurs fonctionnalités et leurs choix de design avec ceux de la plateforme Allofriends. Cette analyse concurrentielle m’a permis d’identifier les écarts et les problèmes d’utilisabilité. À partir de ces observations, j’ai rédigé un rapport détaillé que j’ai présenté aux parties prenantes. J’ai ensuite proposé des recommandations concrètes et des plans d’action pour orienter les prochaines étapes du projet.",
         "step2title": "Réunions et prise de décision",
         "step2Text": "Après avoir défini les personas et identifié les principaux points de friction, j’ai rédigé des rapports détaillés pour résumer mes observations. J’ai ensuite partagé ces informations avec les parties prenantes et les équipes techniques afin de favoriser une prise de décision collaborative et éclairée. Ces échanges ont permis d’aligner les objectifs et de prioriser les solutions à la fois pertinentes pour les utilisateurs et réalisables techniquement. Cette étape a été essentielle pour apporter des améliorations concrètes, même en l’absence de données analytiques.",
         "step3title": "Wireframes",
         "step3Text": "",
         "step4title": "Conception de l'interface utilisateur",
-        "step4Text": ""
+        "step4Text": "Dans ce projet, le design UI était étroitement lié aux améliorations UX. La plupart des ajustements visuels répondaient à des besoins fonctionnels et d’utilisabilité, plutôt qu’à une refonte complète. Cependant, en modifiant légèrement la palette de couleurs et le ton visuel général, j’ai réussi à donner une sensation de fraîcheur à l’interface. Ces changements ont particulièrement contribué à améliorer le ressenti des utilisatrices, rendant l’expérience plus accueillante, équilibrée et engageante sur le plan émotionnel."
       }
    }
   },
