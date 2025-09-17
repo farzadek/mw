@@ -1,0 +1,17 @@
+.uxFolio-container {
+    min-height: calc(100dvh - 275px);
+    @media (min-width: $sm) {
+        min-height: calc(100dvh - 160px);
+    }
+    iframe{
+        min-height: 200px;
+        border-radius: 8px;
+    }
+    .projects{
+        .v-btn{
+            &.selected{
+                border:6px double $primaryColor1;
+            }
+        }
+    }
+}

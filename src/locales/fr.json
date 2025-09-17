@@ -5,6 +5,7 @@
     "portfolio": "Portfolio",
     "portfolioGr": "UI",
     "portfolioUi": "Infographie",
+    "portfolioUx": "Design UX",
     "packages": "Packages",
     "blog": "Blog",
     "contact": "Contact",
@@ -57,7 +58,46 @@
       "office": "Petites entreprises",
       "kindergarten": "Garderie",
       "beauty": "Salon de beauté"
-    }
+    },
+    "uxSectionTitle": "Conception de l'expérience utilisateur (UX)",
+    "uxSections": {
+      "project1":{
+        "projectName": "Coach.moi",
+        "summary": "Résumé",
+        "mission": "Mission",
+        "missionText": "Ce projet visait à concevoir un site web de coaching destiné à aider les utilisateurs dans divers aspects de leur vie quotidienne, comme les finances, la mode, la cuisine, les travaux manuels, etc. Mon objectif était de créer une interface intuitive, accessible et accueillante, où l’utilisateur peut facilement trouver des conseils utiles. En tant que designer UX, j’ai structuré le contenu de manière claire, assuré une navigation fluide, et développé une expérience positive centrée sur les besoins concrets et variés des utilisateurs.",
+        "myContributions": "Mes contributions",
+        "myContributionsText": "J’ai pris en charge l’ensemble du processus UX du début à la fin. Cela comprenait la recherche utilisateur, la définition des thèmes, le choix des polices et des couleurs, la création des wireframes, des prototypes et du design UI. Je me suis concentré sur une organisation claire du contenu, une navigation fluide et une expérience globale centrée sur l’utilisateur. J’ai également collaboré étroitement avec les équipes d’intégration et de développement frontend pour garantir une mise en œuvre fidèle du design final.",
+        "process": "le processus",
+        "step1title": "Structure",
+        "step1Text": "La première étape a été la structuration. Cette structure définit la feuille de route à suivre. Nous l'avons élaborée après de nombreux entretiens avec les parties prenantes et les experts marketing.",
+        "step2title": "Recherche",
+        "step2Text": "La recherche dans ce projet s’est appuyée sur une analyse concurrentielle et comparative. J’ai étudié plusieurs sites à fort trafic, comme Le Figaro, The Times et des blogs populaires, afin de comprendre comment ils organisent leur contenu, orientent les utilisateurs et présentent visuellement l’information. Cette analyse m’a permis de dégager des bonnes pratiques que j’ai adaptées ou personnalisées pour notre site. Certaines fonctionnalités ont été inspirées directement de ces sites, tandis que d’autres ont été repensées pour mieux répondre à nos objectifs et à notre public cible.",
+        "step3title": "Wireframes",
+        "step3Text": "",
+        "step4title": "Infographie",
+        "step4Text": "Le travail de design graphique comprenait la création du logo, des icônes personnalisées, des illustrations, ainsi que la sélection de la palette de couleurs et des typographies du thème. J’étais également responsable de la recherche et de la retouche des photographies, des corrections d’images et de la cohérence visuelle de l’ensemble des éléments graphiques avec l’identité de marque. Chaque élément a été pensé pour renforcer l’expérience utilisateur et donner au site une interface attrayante et harmonieuse.",
+        "step5title": "Conception de l'interface utilisateur",
+        "step5Text": ""
+      },
+      "project2":{
+        "projectName": "Allofriends.net",
+        "summary": "Résumé",
+        "mission": "Mission",
+        "missionText": "Le projet Allofriends consistait à améliorer un site web déjà en production, mais qui ne disposait d’aucune donnée analytique, ni d’événements suivis. Le principal défi était de détecter les points de friction sans données quantitatives. Pour y parvenir, j’ai effectué une évaluation heuristique, une analyse de la concurrence et des tests manuels des parcours utilisateurs afin d’identifier les problèmes d’utilisabilité. J’ai également mené des entrevues informelles et recueilli des retours qualitatifs pour mieux comprendre les besoins et les comportements des utilisateurs. Cette approche m’a permis de proposer des améliorations ciblées malgré l’absence de données chiffrées.",
+        "myContributions": "Mes contributions",
+        "myContributionsText": "Dans ce projet, j’ai occupé plusieurs rôles : chercheur UX, analyste UX, designer UI et développeur frontend. En l’absence de données analytiques, j’ai identifié les points de friction grâce à une évaluation heuristique et des tests manuels. J’ai proposé des solutions concrètes pour améliorer l’utilisabilité, repensé l’interface utilisateur pour plus de clarté et de cohérence, et introduit des améliorations visuelles pour rendre l’expérience plus engageante. J’ai également réfléchi à des stratégies pour augmenter la rétention des visiteurs. Une fois le design finalisé, j’ai participé activement à l’intégration frontend.",
+        "process": "le processus",
+        "step1title": "Recherche et analyse",
+        "step1Text": "Pour repérer les points faibles et les axes d’amélioration, j’ai d’abord analysé le fonctionnement d’autres sites de rencontres populaires. J’ai comparé leurs parcours utilisateurs, leurs fonctionnalités et leurs choix de design avec ceux de la plateforme Allofriends. Cette analyse concurrentielle m’a permis d’identifier les écarts et les problèmes d’utilisabilité. À partir de ces observations, j’ai rédigé un rapport détaillé que j’ai présenté aux parties prenantes. J’ai ensuite proposé des recommandations concrètes et des plans d’action pour orienter les prochaines étapes du projet.",
+        "step2title": "Réunions et prise de décision",
+        "step2Text": "Après avoir défini les personas et identifié les principaux points de friction, j’ai rédigé des rapports détaillés pour résumer mes observations. J’ai ensuite partagé ces informations avec les parties prenantes et les équipes techniques afin de favoriser une prise de décision collaborative et éclairée. Ces échanges ont permis d’aligner les objectifs et de prioriser les solutions à la fois pertinentes pour les utilisateurs et réalisables techniquement. Cette étape a été essentielle pour apporter des améliorations concrètes, même en l’absence de données analytiques.",
+        "step3title": "Wireframes",
+        "step3Text": "",
+        "step4title": "Conception de l'interface utilisateur",
+        "step4Text": "Dans ce projet, le design UI était étroitement lié aux améliorations UX. La plupart des ajustements visuels répondaient à des besoins fonctionnels et d’utilisabilité, plutôt qu’à une refonte complète. Cependant, en modifiant légèrement la palette de couleurs et le ton visuel général, j’ai réussi à donner une sensation de fraîcheur à l’interface. Ces changements ont particulièrement contribué à améliorer le ressenti des utilisatrices, rendant l’expérience plus accueillante, équilibrée et engageante sur le plan émotionnel."
+      }
+   }
   },
   "packages": {
     "subTitle": "Voir quelques projets et conceptions",
@@ -97,12 +137,20 @@
     "lengthErr": "Longueur de caractères non valide, min. requis. {longueur} caractères",
     "phoneErr": "Le numéro de téléphone est incorrect",
     "sendMailErr": "E-mail non envoyé, essayez plus tard !",
-    "sendMailSuccess": "E-mail envoyé avec succès!"
+    "sendMailSuccess": "E-mail envoyé avec succès!",
+    "send": "Envoyer",
+    "tabs":{
+      "tab1": "Formulaire",
+      "tab2": "Message vocal"
+    }
   },
   "pageNotFound": {
     "title": "Était-ce une faute de frappe ou une mauvaise URL ?",
     "backToHome": "Accueil",
     "graphic": "Conceptions graphiques",
     "ui": "Design web (UI)"
+  },
+  "errors": {
+    "load": "Erreur temporaire, impossible de charger les informations"
   }
 }

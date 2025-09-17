@@ -3,12 +3,19 @@
     <v-container>
       <v-row>
         <div class="logo-title-box">
-          <img
-            class="logo-image d-md-none ml-3"
-            :src="logo"
-            alt="montreal web logo"
-          />
-          <span class="logo-title d-none d-md-block">MontrealWEB</span>
+          <router-link to="/" class="logo-link">
+            <img
+              class="logo-image d-none d-md-block"
+              :src="logo"
+              alt="montreal web logo"
+            />
+            <img
+              class="logo-image d-md-none ml-3"
+              :src="logo"
+              alt="montreal web logo"
+            />
+            <span class="logo-title d-none d-md-block">MontrealWEB</span>
+          </router-link>
         </div>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon
@@ -25,9 +32,7 @@
           }}</v-btn>
           <v-menu>
             <template v-slot:activator="{ props }">
-              <v-btn
-                v-bind="props"
-                @click="scrollToAnchorPoint('portfolioSection')"
+              <v-btn v-bind="props"
                 >{{ $t("appbar.portfolio")
                 }}<v-icon>mdi mdi-menu-down</v-icon></v-btn
               >
@@ -41,6 +46,11 @@
               <v-list-item>
                 <v-btn variant="plain" block to="/ui">{{
                   $t("appbar.portfolioUi")
+                }}</v-btn>
+              </v-list-item>
+              <v-list-item>
+                <v-btn variant="plain" block to="/ux">{{
+                  $t("appbar.portfolioUx")
                 }}</v-btn>
               </v-list-item>
             </v-list>
@@ -86,8 +96,11 @@
                 $t("appbar.portfolioGr")
               }}</router-link>
             </v-btn>
-            <v-btn block variant="pl}ain">
+            <v-btn block variant="plain">
               <router-link to="/ui">{{ $t("appbar.portfolioUi") }}</router-link>
+            </v-btn>
+            <v-btn block variant="plain">
+              <router-link to="/ux">{{ $t("appbar.portfolioUx") }}</router-link>
             </v-btn>
             <v-divider></v-divider>
           </v-expansion-panel-text>

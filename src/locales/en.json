@@ -5,6 +5,7 @@
     "portfolio": "Portfolio",
     "portfolioGr": "Graphic design",
     "portfolioUi": "Design web (UI)",
+    "portfolioUx": "UX design",
     "packages": "Packages",
     "blog": "Blog",
     "contact": "Contact",
@@ -58,7 +59,46 @@
       "office": "Small businesses",
       "kindergarten": "Kindergarten",
       "beauty": "Beauty salon"
-    }
+    },
+    "uxSectionTitle": "User Experience design (UX)",
+    "uxSections": {
+      "project1":{
+        "projectName": "Coach.moi",
+        "summary": "Summary",
+        "mission": "Mission",
+        "missionText": "This project involved designing a coaching website to help users with different aspects of daily life—personal finance, fashion, cooking, DIY, and more. The goal was to create an intuitive, accessible, and welcoming platform where users could easily find practical advice. As the UX designer. The result is a simple, engaging site that guides users toward helpful resources tailored to their everyday needs.",
+        "myContributions": "My Contributions",
+        "myContributionsText": "I was responsible for the entire UX process from start to finish. This included user research, theming, font and color selection, wireframing, prototyping, and UI design. I focused on organizing the content in a clear and accessible way, designing smooth navigation flows, and ensuring the overall experience was supportive and user-centered. I also collaborated closely with the integration and frontend teams to ensure the design vision was implemented accurately and efficiently across the final product.",
+        "process": "The process",
+        "step1title": "Structure",
+        "step1Text": "The first step was the structure. The structure shows the map that we need to follow. We draw it after multiple interviews with stakeholders and also marketing experts.",
+        "step2title": "Research",
+        "step2Text": "The research for this project was based on competitive and comparative analysis. I studied several high-traffic websites such as Le Figaro, The Times, and popular lifestyle blogs to understand how they structure content, guide users, and present information visually. By analyzing their strengths and identifying common design patterns, I gained valuable insights that I adapted and customized for our website. Some features were directly inspired by these sources, while others were reimagined to better suit our goals and target audience.",
+        "step3title": "wireframes",
+        "step3Text": "",
+        "step4title": "Graphic Design",
+        "step4Text": "The graphic design work for this project included creating the logo, custom icons, and illustrations, as well as selecting the theme's color palette and typography. I was also responsible for sourcing and editing photography, performing image corrections, and ensuring that all visual elements were consistent with the overall brand identity. Every graphic component was designed to enhance the user experience and support the site’s tone, making the interface both visually appealing and coherent.",
+        "step5title": "UI Design",
+        "step5Text": ""
+      },
+      "project2":{
+        "projectName": "AlloFriends.net",
+        "summary": "Summary",
+        "mission": "Mission",
+        "missionText": "The Allofriends project involved improving an existing website that was already in production but lacked any form of analytics, tracking events, or user data. The main challenge was identifying user pain points without quantitative data to guide decisions. To overcome this, I relied on heuristic evaluation, competitor analysis, and manual testing of user flows to detect friction points and usability issues. I also conducted informal interviews and gathered qualitative feedback to better understand user needs and behaviors. This approach helped define targeted improvements despite the absence of tracked data.",
+        "myContributions": "My Contributions",
+        "myContributionsText": "On this project, I played multiple roles: UX researcher, UX analyst, UI designer, and frontend developer. I began by identifying user pain points through heuristic evaluations and manual testing, given the absence of analytics or tracking data. I proposed practical solutions to improve usability and engagement, redesigned the user interface for better clarity and consistency, and introduced visual improvements to make the experience more inviting. Additionally, I worked on strategies to retain visitors longer on the site. Once the design was finalized, I actively contributed to frontend development to implement the new interface.",
+        "process": "The process",
+        "step1title": "Research and analysis",
+        "step1Text": "To identify weaknesses and improvement opportunities, I began by analyzing how other successful dating websites structure their user experience. I compared their flows, features, and design approaches with those of the Allofriends platform. This competitive analysis helped me understand the key differences and usability gaps. Based on these insights, I created a detailed report outlining areas of improvement and presented it to stakeholders. I then developed a set of actionable recommendations and change plans to guide the next phases of the project.",
+        "step2title": "Meetings and decision making",
+        "step2Text": "After developing user personas and identifying key pain points, I created detailed reports summarizing my findings. I shared these insights with stakeholders and technical teams to ensure a collaborative and informed decision-making process. These discussions helped align our goals and allowed us to prioritize solutions that were both technically feasible and valuable to users. This step was crucial in making meaningful, data-informed improvements despite the lack of analytics.",
+        "step3title": "wireframes",
+        "step3Text": "",
+        "step4title": "UI Design",
+        "step4Text": "In this project, the UI design was closely tied to the UX improvements. Most of the visual updates were made in response to functional and usability changes, rather than as independent redesigns. However, with subtle adjustments to the color palette and overall visual tone, I was able to create a fresher, more inviting interface. These visual refinements especially helped enhance the comfort and appeal for female users, leading to a more balanced and emotionally engaging user experience."
+      }
+   }
   },
   "packages": {
     "subTitle": "See some projects and designs",
@@ -98,12 +138,20 @@
     "lengthErr": "Invalid character length, required min. {length} characters",
     "phoneErr": "Phone number is not correct",
     "sendMailErr": "Email not send, try later!",
-    "sendMailSuccess": "Email sent successfully!"
+    "sendMailSuccess": "Email sent successfully!",
+    "send": "Send",
+    "tabs":{
+      "tab1": "Contact form",
+      "tab2": "Voice message"
+    }
   },
   "pageNotFound": {
     "title": "Was it a typo or wrong url?",
     "backToHome": "home",
     "graphic": "Graphic Design portfolio",
     "ui": "UI design portfolio"
+  },
+  "errors": {
+    "load": "Temporary error, Couldn't load information"
   }
 }
